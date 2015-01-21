@@ -14,6 +14,7 @@
 		8B03B3331A6FA00B003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3321A6FA00B003FF5CF /* Images.xcassets */; };
 		8B03B3361A6FA00B003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3341A6FA00B003FF5CF /* LaunchScreen.xib */; };
 		8B03B3421A6FA00C003FF5CF /* HomeKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03B3411A6FA00C003FF5CF /* HomeKitDemoTests.m */; };
+		BA1A567A1A6FA300005B9898 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA1A56791A6FA300005B9898 /* HomeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		8B03B33B1A6FA00C003FF5CF /* HomeKitDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeKitDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B03B3401A6FA00C003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B3411A6FA00C003FF5CF /* HomeKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeKitDemoTests.m; sourceTree = "<group>"; };
+		BA1A56781A6FA2DA005B9898 /* HomeKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = HomeKitDemo.entitlements; sourceTree = "<group>"; };
+		BA1A56791A6FA300005B9898 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA1A567A1A6FA300005B9898 /* HomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +67,7 @@
 		8B03B3191A6FA00B003FF5CF = {
 			isa = PBXGroup;
 			children = (
+				BA1A56791A6FA300005B9898 /* HomeKit.framework */,
 				8B03B3241A6FA00B003FF5CF /* HomeKitDemo */,
 				8B03B33E1A6FA00C003FF5CF /* HomeKitDemoTests */,
 				8B03B3231A6FA00B003FF5CF /* Products */,
@@ -81,6 +86,7 @@
 		8B03B3241A6FA00B003FF5CF /* HomeKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BA1A56781A6FA2DA005B9898 /* HomeKitDemo.entitlements */,
 				8B03B3291A6FA00B003FF5CF /* AppDelegate.h */,
 				8B03B32A1A6FA00B003FF5CF /* AppDelegate.m */,
 				8B03B32C1A6FA00B003FF5CF /* ViewController.h */,
@@ -168,6 +174,15 @@
 				TargetAttributes = {
 					8B03B3211A6FA00B003FF5CF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Q79FTA4VEX;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
 					};
 					8B03B33A1A6FA00C003FF5CF = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -343,9 +358,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HomeKitDemo/HomeKitDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HomeKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -353,9 +372,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HomeKitDemo/HomeKitDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = HomeKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -412,6 +435,7 @@
 				8B03B3471A6FA00C003FF5CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B03B3481A6FA00C003FF5CF /* Build configuration list for PBXNativeTarget "HomeKitDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +444,7 @@
 				8B03B34A1A6FA00C003FF5CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
