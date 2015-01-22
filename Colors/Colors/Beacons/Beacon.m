@@ -1,14 +1,14 @@
 //
-//  BeaconInformation.m
+//  Beacon.m
 //  Colors
 //
 //  Created by Lukasz Stocki on 22.01.2015.
 //  Copyright (c) 2015 ACME. All rights reserved.
 //
 
-#import "BeaconInformation.h"
+#import "Beacon.h"
 
-@implementation BeaconInformation
+@implementation Beacon
 
 - (instancetype)initWithUUID:(NSString *)uuid
                         name:(NSString *)name

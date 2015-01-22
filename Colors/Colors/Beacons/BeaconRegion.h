@@ -13,7 +13,7 @@
 @property (nonatomic, copy) NSString *uuid;
 @property (nonatomic, copy) NSString *name;
 
-- (instancetype)initWitName:(NSString *)name
-                       UUID:(NSString *)uuid NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithUUID:(NSString *)uuid
+                        name:(NSString *)name NS_DESIGNATED_INITIALIZER;
 
 @end

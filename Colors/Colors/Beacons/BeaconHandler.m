@@ -1,23 +1,23 @@
 //
-//  BeaconMaster.m
+//  BeaconHandler.m
 //  Colors
 //
 //  Created by Lukasz Stocki on 22.01.2015.
 //  Copyright (c) 2015 ACME. All rights reserved.
 //
 
-#import "BeaconMaster.h"
+#import "BeaconHandler.h"
 
 static NSUInteger RegionsLimit = 20;
 
-@interface BeaconMaster () <CLLocationManagerDelegate>
+@interface BeaconHandler () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, weak) id <BeaconEventHandler> delegate;
 
 @end
 
-@implementation BeaconMaster
+@implementation BeaconHandler
 
 - (instancetype)initWithBeaconRegions:(NSArray *)regions
                             delegate:(id<BeaconEventHandler>)delegate
@@ -31,6 +31,7 @@ static NSUInteger RegionsLimit = 20;
         
         [self registerRegions:regions];
     }
+    return self;
 }
 
 - (void)registerRegions:(NSArray *)regions
@@ -45,7 +46,6 @@ static NSUInteger RegionsLimit = 20;
 - (void)startMonitoringBeaconInRegion:(BeaconRegion *)region
 {
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:region.uuid];
-    NSAssert(uuid, <#desc, ...#>)
 }
 
 #pragma mark - CLLocationManagerDelegate

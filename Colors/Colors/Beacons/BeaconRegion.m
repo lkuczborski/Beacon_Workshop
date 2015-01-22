@@ -10,8 +10,8 @@
 
 @implementation BeaconRegion
 
-- (instancetype)initWitName:(NSString *)name
-                       UUID:(NSString *)uuid
+- (instancetype)initWithUUID:(NSString *)uuid
+                        name:(NSString *)name
 {
     self = [super init];
     if (self) {

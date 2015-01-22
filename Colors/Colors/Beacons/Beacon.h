@@ -1,5 +1,5 @@
 //
-//  BeaconInformation.h
+//  Beacon.h
 //  Colors
 //
 //  Created by Lukasz Stocki on 22.01.2015.
@@ -9,7 +9,7 @@
 @import Foundation;
 @import CoreLocation;
 
-@interface BeaconInformation : NSObject
+@interface Beacon : NSObject
 
 @property (nonatomic, copy) NSString *uuid;
 @property (nonatomic, copy) NSString *name;

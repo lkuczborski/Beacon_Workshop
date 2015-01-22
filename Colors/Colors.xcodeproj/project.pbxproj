@@ -14,9 +14,9 @@
 		8B03B2941A6F9FBE003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2931A6F9FBE003FF5CF /* Images.xcassets */; };
 		8B03B2971A6F9FBE003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2951A6F9FBE003FF5CF /* LaunchScreen.xib */; };
 		8B03B2A31A6F9FBE003FF5CF /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03B2A21A6F9FBE003FF5CF /* ColorsTests.m */; };
-		BA38E19F1A70F3C000A12CB3 /* BekonMaster.m in Sources */ = {isa = PBXBuildFile; fileRef = BA38E19E1A70F3C000A12CB3 /* BekonMaster.m */; };
-		BA38E1A21A70F3E000A12CB3 /* BekonInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = BA38E1A11A70F3E000A12CB3 /* BekonInformation.m */; };
-		BA38E1A51A70FBD500A12CB3 /* BekonRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = BA38E1A41A70FBD500A12CB3 /* BekonRegion.m */; };
+		8B45A2AE1A71091D00AA5B3E /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B45A2A91A71091D00AA5B3E /* Beacon.m */; };
+		8B45A2AF1A71091D00AA5B3E /* BeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B45A2AB1A71091D00AA5B3E /* BeaconHandler.m */; };
+		8B45A2B01A71091D00AA5B3E /* BeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B45A2AD1A71091D00AA5B3E /* BeaconRegion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +43,12 @@
 		8B03B29C1A6F9FBE003FF5CF /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B03B2A11A6F9FBE003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B2A21A6F9FBE003FF5CF /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
-		BA38E19D1A70F3C000A12CB3 /* BekonMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BekonMaster.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		BA38E19E1A70F3C000A12CB3 /* BekonMaster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BekonMaster.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		BA38E1A01A70F3E000A12CB3 /* BekonInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BekonInformation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		BA38E1A11A70F3E000A12CB3 /* BekonInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BekonInformation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		BA38E1A31A70FBD500A12CB3 /* BekonRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = BekonRegion.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		BA38E1A41A70FBD500A12CB3 /* BekonRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BekonRegion.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8B45A2A81A71091D00AA5B3E /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
+		8B45A2A91A71091D00AA5B3E /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
+		8B45A2AA1A71091D00AA5B3E /* BeaconHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconHandler.h; sourceTree = "<group>"; };
+		8B45A2AB1A71091D00AA5B3E /* BeaconHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconHandler.m; sourceTree = "<group>"; };
+		8B45A2AC1A71091D00AA5B3E /* BeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconRegion.h; sourceTree = "<group>"; };
+		8B45A2AD1A71091D00AA5B3E /* BeaconRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconRegion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 		8B03B2851A6F9FBE003FF5CF /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				BA38E19C1A70F33000A12CB3 /* BekonMaster */,
+				8B45A2A71A71091D00AA5B3E /* Beacons */,
 				8B03B28A1A6F9FBE003FF5CF /* AppDelegate.h */,
 				8B03B28B1A6F9FBE003FF5CF /* AppDelegate.m */,
 				8B03B28D1A6F9FBE003FF5CF /* ViewController.h */,
@@ -129,17 +129,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BA38E19C1A70F33000A12CB3 /* BekonMaster */ = {
+		8B45A2A71A71091D00AA5B3E /* Beacons */ = {
 			isa = PBXGroup;
 			children = (
-				BA38E19D1A70F3C000A12CB3 /* BekonMaster.h */,
-				BA38E19E1A70F3C000A12CB3 /* BekonMaster.m */,
-				BA38E1A01A70F3E000A12CB3 /* BekonInformation.h */,
-				BA38E1A11A70F3E000A12CB3 /* BekonInformation.m */,
-				BA38E1A31A70FBD500A12CB3 /* BekonRegion.h */,
-				BA38E1A41A70FBD500A12CB3 /* BekonRegion.m */,
+				8B45A2A81A71091D00AA5B3E /* Beacon.h */,
+				8B45A2A91A71091D00AA5B3E /* Beacon.m */,
+				8B45A2AA1A71091D00AA5B3E /* BeaconHandler.h */,
+				8B45A2AB1A71091D00AA5B3E /* BeaconHandler.m */,
+				8B45A2AC1A71091D00AA5B3E /* BeaconRegion.h */,
+				8B45A2AD1A71091D00AA5B3E /* BeaconRegion.m */,
 			);
-			path = BekonMaster;
+			path = Beacons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,10 +244,10 @@
 			files = (
 				8B03B28F1A6F9FBE003FF5CF /* ViewController.m in Sources */,
 				8B03B28C1A6F9FBE003FF5CF /* AppDelegate.m in Sources */,
+				8B45A2AE1A71091D00AA5B3E /* Beacon.m in Sources */,
+				8B45A2B01A71091D00AA5B3E /* BeaconRegion.m in Sources */,
 				8B03B2891A6F9FBE003FF5CF /* main.m in Sources */,
-				BA38E1A51A70FBD500A12CB3 /* BekonRegion.m in Sources */,
-				BA38E1A21A70F3E000A12CB3 /* BekonInformation.m in Sources */,
-				BA38E19F1A70F3C000A12CB3 /* BekonMaster.m in Sources */,
+				8B45A2AF1A71091D00AA5B3E /* BeaconHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
