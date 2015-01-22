@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BeaconHandler.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <BeaconEventHandler>
 
 @end
 
