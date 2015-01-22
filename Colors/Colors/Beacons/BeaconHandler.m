@@ -15,6 +15,11 @@ static NSUInteger RegionsLimit = 20;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, weak) id <BeaconEventHandler> delegate;
 
+@property (nonatomic, strong) NSMutableArray *beacons;
+@property (nonatomic, copy) NSArray *regions;
+
+@property (nonatomic, assign, getter=isRunning) BOOL running;
+
 @end
 
 @implementation BeaconHandler
@@ -22,30 +27,53 @@ static NSUInteger RegionsLimit = 20;
 - (instancetype)initWithBeaconRegions:(NSArray *)regions
                             delegate:(id<BeaconEventHandler>)delegate
 {
+    NSAssert((regions.count <= RegionsLimit), @"iOS applications have limit on max amount of regions");
+    
     self = [super init];
     if (self) {
         _locationManager = [CLLocationManager new];
         _locationManager.delegate = self;
         
+        _beacons = [NSMutableArray array];
+        
         _delegate = delegate;
         
-        [self registerRegions:regions];
+        _regions = [regions copy];
     }
     return self;
 }
 
-- (void)registerRegions:(NSArray *)regions
+- (void)start
 {
-    NSAssert((regions.count <= RegionsLimit), @"iOS applications have limit on max amount of regions");
-    
-    for (BeaconRegion *region in regions) {
-        [self startMonitoringBeaconInRegion:region];
+    if (self.isRunning == NO) {
+        self.isRunning = YES;
+        
+        [self registerRegions];
     }
 }
 
-- (void)startMonitoringBeaconInRegion:(BeaconRegion *)region
+- (void)registerRegions
+{
+    for (BeaconRegion *region in self.regions) {
+        [self startMonitoringBeaconInRegion:region];
+        [self.bea]
+    }
+}
+
+- (CLBeaconRegion *)startMonitoringBeaconInRegion:(BeaconRegion *)region
 {
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:region.uuid];
+    NSAssert(uuid != nil, @"UUID should be non nil");
+    
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
+                                                                identifier:butcher.name];
+    
+    region.notifyOnEntry             = YES;
+    region.notifyOnExit              = YES;
+    region.notifyEntryStateOnDisplay = YES;
+    
+    [_locationManager startMonitoringForRegion:region];
+    [_locationManager startRangingBeaconsInRegion:region];
 }
 
 #pragma mark - CLLocationManagerDelegate

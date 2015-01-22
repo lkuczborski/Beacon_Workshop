@@ -30,4 +30,6 @@
 - (NSArray *)nearBeacons;
 - (NSArray *)immediateBeacons;
 
+- (void)start;
+
 @end
