@@ -8,6 +8,8 @@
 
 #import "Beacon.h"
 
+#import <float.h>
+
 @interface Beacon ()
 
 @property (assign, readwrite) CLLocationAccuracy accuracyMax;
@@ -31,6 +33,13 @@
         _uuid = [uuid copy];
         _major = major;
         _minor = minor;
+		
+		_accuracyMax = DBL_MAX;
+		_accuracyMin = DBL_MIN;
+		
+		//TODO: check if those values are Ok
+		_rssiMax = NSIntegerMax;
+		_rssiMin = NSIntegerMin;
     }
     return self;
 }
@@ -46,7 +55,7 @@
 #pragma mark Accuracy
 - (void)setAccuracy:(CLLocationAccuracy)accuracy
 {
-	if (_accuracy == accuracy) {
+	if ([@(_accuracy) compare:@(accuracy)] == NSOrderedSame) {
 		return;
 	}
 	
