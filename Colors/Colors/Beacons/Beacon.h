@@ -12,18 +12,24 @@
 @interface Beacon : NSObject
 
 @property (nonatomic, copy) NSString *uuid;
-@property (nonatomic, copy) NSString *name;
 
 @property (nonatomic, strong) NSNumber *major;
 @property (nonatomic, strong) NSNumber *minor;
 
 @property (assign, nonatomic) CLProximity proximity;
-@property (assign, nonatomic) CLLocationAccuracy accuracy;
+
+@property (assign, readwrite) CLLocationAccuracy accuracy;
+@property (assign, readonly) CLLocationAccuracy accuracyMax;
+@property (assign, readonly) CLLocationAccuracy accuracyMin;
+
 @property (assign, nonatomic) NSInteger rssi;
+@property (assign, readonly) NSInteger rssiMax;
+@property (assign, readonly) NSInteger rssiMin;
 
 - (instancetype)initWithUUID:(NSString *)uuid
-                        name:(NSString *)name
                        major:(NSNumber *)major
                        minor:(NSNumber *)minor NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)initWithBeacon:(CLBeacon *)beacon;
 
 @end

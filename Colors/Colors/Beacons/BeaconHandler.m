@@ -18,6 +18,8 @@ static NSUInteger RegionsLimit = 20;
 @property (nonatomic, strong) NSMutableArray *beacons;
 @property (nonatomic, copy) NSArray *regions;
 
+@property (nonatomic, strong) NSMutableDictionary *handledBeacons;
+
 @property (nonatomic, assign, getter=isRunning) BOOL running;
 
 @end
@@ -35,6 +37,7 @@ static NSUInteger RegionsLimit = 20;
         _locationManager.delegate = self;
         
         _beacons = [NSMutableArray array];
+		_handledBeacons = [NSMutableDictionary dictionary];
         
         _delegate = delegate;
         
@@ -56,7 +59,6 @@ static NSUInteger RegionsLimit = 20;
 {
     for (BeaconRegion *region in self.regions) {
         [self startMonitoringBeaconInRegion:region];
-        [self.bea]
     }
 }
 
@@ -76,6 +78,55 @@ static NSUInteger RegionsLimit = 20;
     [_locationManager startRangingBeaconsInRegion:region];
 }
 
+#pragam mark - Private API
+
+- (Beacon *)updateBeacon:(CLBeacon *)beacon
+{
+	Beacon *handledBeacon = [self handledBeaconForBeacon:beacon];
+	NSAssert(handledBeacon != nil, @"This should not be nil!");
+	
+	handledBeacon.proximity = beacon.proximity;
+	handledBeacon.accuracy = beacon.accuracy;
+	handledBeacon.rssi = beacon.rssi;
+	
+	return handledBeacon;
+}
+
+#pragma mark - Helper Methods
+
+- (Beacon *)handledBeaconForBeacon:(CLBeacon *)beacon
+{
+	Beacon *handledBeacon = self.handledBeacons[beacon.proximityUUID];
+	
+	if (handledBeacon == nil) {
+		Beacon *newHandledBeacon = [[Beacon alloc] initWithBeacon:beacon];
+		NSAssert(newHandledBeacon != nil, @"New beacon should be created.");
+		
+		self.handledBeacons[newHandledBeacon.proximity] = newHandledBeacon;
+		handledBeacon = newHandledBeacon;
+	}
+	
+	return handledBeacon;
+}
+
 #pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager
+		didRangeBeacons:(NSArray *)beacons
+			   inRegion:(CLBeaconRegion *)region
+{
+	NSMutableArray *updatedBeacons = [NSMutableArray array];
+	
+	for (CLBeacon *beacon in beacons) {
+		Beacon *updatedBeacon = [self updateBeacon:beacon];
+		if (updatedBeacon) {
+			
+			[updatedBeacons addObject:updatedBeacon];
+		}
+	}
+	
+	[self.delegate beaconHandler:self
+				didUpdateBeacons:[NSArray arrayWithArray:updatedBeacons]];
+}
 
 @end
