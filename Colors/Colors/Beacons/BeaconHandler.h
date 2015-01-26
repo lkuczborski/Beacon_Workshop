@@ -26,10 +26,6 @@
 - (instancetype)initWithBeaconRegions:(NSArray *)regions
                              delegate:(id <BeaconEventHandler>)delegate NS_DESIGNATED_INITIALIZER;
 
-- (NSArray *)farBeacons;
-- (NSArray *)nearBeacons;
-- (NSArray *)immediateBeacons;
-
 - (void)start;
 
 @end
