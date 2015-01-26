@@ -49,7 +49,7 @@ static NSUInteger RegionsLimit = 20;
 - (void)start
 {
     if (self.isRunning == NO) {
-        self.isRunning = YES;
+        self.running = YES;
         
         [self registerRegions];
     }
@@ -62,13 +62,13 @@ static NSUInteger RegionsLimit = 20;
     }
 }
 
-- (CLBeaconRegion *)startMonitoringBeaconInRegion:(BeaconRegion *)region
+- (CLBeaconRegion *)startMonitoringBeaconInRegion:(BeaconRegion *)inRegion
 {
-    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:region.uuid];
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:inRegion.uuid];
     NSAssert(uuid != nil, @"UUID should be non nil");
     
     CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
-                                                                identifier:butcher.name];
+                                                                identifier:inRegion.name];
     
     region.notifyOnEntry             = YES;
     region.notifyOnExit              = YES;
@@ -76,9 +76,11 @@ static NSUInteger RegionsLimit = 20;
     
     [_locationManager startMonitoringForRegion:region];
     [_locationManager startRangingBeaconsInRegion:region];
+	
+	return region;
 }
 
-#pragam mark - Private API
+#pragma mark - Private API
 
 - (Beacon *)updateBeacon:(CLBeacon *)beacon
 {
@@ -102,7 +104,7 @@ static NSUInteger RegionsLimit = 20;
 		Beacon *newHandledBeacon = [[Beacon alloc] initWithBeacon:beacon];
 		NSAssert(newHandledBeacon != nil, @"New beacon should be created.");
 		
-		self.handledBeacons[newHandledBeacon.proximity] = newHandledBeacon;
+		self.handledBeacons[newHandledBeacon.description] = newHandledBeacon;
 		handledBeacon = newHandledBeacon;
 	}
 	
@@ -116,7 +118,7 @@ static NSUInteger RegionsLimit = 20;
 {
 	if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
 		
-		[self startMonitoringAllRegions];
+		[self start];
 		
 		[self.locationManager startUpdatingLocation];
 	}

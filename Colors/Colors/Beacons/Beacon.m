@@ -96,7 +96,7 @@
 - (void)updateMinRSSIWithRSSI:(NSInteger)rssi
 {
 	//TODO: check if that is right or should be reversed
-	self.rssiMin = [@(self.rssiMin, rssi)) integerValue];
+	self.rssiMin = [@(fmin(self.rssiMin, rssi)) integerValue];
 }
 
 #pragma mark - Helpers

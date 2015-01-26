@@ -18,7 +18,7 @@
 
 @property (assign, nonatomic) CLProximity proximity;
 
-@property (assign, readwrite) CLLocationAccuracy accuracy;
+@property (assign, readwrite, nonatomic) CLLocationAccuracy accuracy;
 @property (assign, readonly) CLLocationAccuracy accuracyMax;
 @property (assign, readonly) CLLocationAccuracy accuracyMin;
 
