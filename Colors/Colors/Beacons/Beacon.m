@@ -38,8 +38,8 @@
 		_accuracyMin = DBL_MIN;
 		
 		//TODO: check if those values are Ok
-		_rssiMax = NSIntegerMax;
-		_rssiMin = NSIntegerMin;
+		_rssiMax = NSIntegerMin;
+		_rssiMin = NSIntegerMax;
     }
     return self;
 }
@@ -86,7 +86,7 @@
 #pragma mark RSSI
 - (void)setRssi:(NSInteger)rssi
 {
-	if (_rssi == rssi) {
+	if (_rssi == rssi || rssi == 0) {
 		return;
 	}
 	
@@ -97,14 +97,16 @@
 
 - (void)updateMaxRSSIWithRSSI:(NSInteger)rssi
 {
-	//TODO: check if that is right or should be reversed
-	self.rssiMax = [@(fmax(self.rssiMax, rssi)) integerValue];
+	if (self.rssiMax < rssi) {
+		self.rssiMax = rssi;
+	}
 }
 
 - (void)updateMinRSSIWithRSSI:(NSInteger)rssi
 {
-	//TODO: check if that is right or should be reversed
-	self.rssiMin = [@(fmin(self.rssiMin, rssi)) integerValue];
+	if (self.rssiMin > rssi) {
+		self.rssiMin = rssi;
+	}
 }
 
 #pragma mark - Public API
