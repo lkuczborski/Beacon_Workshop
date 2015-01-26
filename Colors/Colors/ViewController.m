@@ -15,10 +15,6 @@ static NSString *const GREEN_UUID = @"3A7E7514-A9AC-41F3-A236-3CFCE75BAC95";
 
 @interface ViewController () <BeaconEventHandler>
 
-@property Beacon *rBeacon;
-@property Beacon *gBeacon;
-@property Beacon *bBeacon;
-
 @property (nonatomic, strong) BeaconHandler *handler;
 
 @end
@@ -33,18 +29,44 @@ static NSString *const GREEN_UUID = @"3A7E7514-A9AC-41F3-A236-3CFCE75BAC95";
 }
 
 - (CGFloat)getComponentValueFromBeacon:(Beacon *)beacon {
-    return 0.f;
+
+	// http://stn.spotfire.com/spotfire_client_help/norm/norm_scale_between_0_and_1.htm
+	CGFloat normalized = fabsl(beacon.accuracy - beacon.accuracyMin) / fabsl(beacon.accuracyMax - beacon.accuracyMin);
+	
+	// some more hints using proximity
+	if (beacon.proximity == CLProximityImmediate) {
+		normalized += 0.5;
+	}
+	else if (beacon.proximity == CLProximityUnknown) {
+		normalized -= 0.1;
+	}
+	else if (beacon.proximity == CLProximityNear){
+		normalized += 0.1;
+	}
+	
+	// checking the bounds again...
+	if (normalized < 0) {
+		normalized = 0.0001;
+	}
+	
+	if (normalized > 1) {
+		normalized = 1;
+	}
+	
+    return normalized;
 }
 
 - (void)animateToColor:(UIColor*)color {
-    [UIView animateWithDuration:0.5 animations:^{
-        self.view.layer.backgroundColor = color.CGColor;
-    } completion:NULL];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+	
+	self.view.backgroundColor = color;
+	
+	// TODO: find a nice way to animate this...
+//	[UIView animateWithDuration:1
+//						  delay:0
+//						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut
+//					 animations:^{
+//						 self.view.layer.backgroundColor = color.CGColor;
+//					 } completion:nil];
 }
 
 #pragma mark - BeaconHandler
@@ -70,24 +92,25 @@ static NSString *const GREEN_UUID = @"3A7E7514-A9AC-41F3-A236-3CFCE75BAC95";
 - (void)beaconHandler:(BeaconHandler *)handler
 	 didUpdateBeacons:(NSArray *)beacons {
 	
-	NSLog(@"%s\t :  ", __PRETTY_FUNCTION__);
+	UIColor *currentColor = [UIColor colorWithCGColor:self.view.layer.backgroundColor];
+	CGFloat r = 0.f;
+	CGFloat g = 0.f;
+	CGFloat b = 0.f;
+	CGFloat a = 1.f;
+	[currentColor getRed:&r green:&g blue:&b alpha:&a];
+	r *= 0.9; g *= 0.9; b *= 0.9; 
+	for (Beacon *beacon in beacons) {
+		if ([beacon.uuid isEqualToString:RED_UUID]) {
+			r = [self getComponentValueFromBeacon:beacon];
+		} else if ([beacon.uuid isEqualToString:GREEN_UUID]) {
+			g = [self getComponentValueFromBeacon:beacon];
+		} else if ([beacon.uuid isEqualToString:BLUE_UUID]) {
+			b = [self getComponentValueFromBeacon:beacon];
+		}
+	}
 	
-//	UIColor *currentColor = [UIColor colorWithCGColor:self.view.layer.backgroundColor];
-//	CGFloat r = 0.f;
-//	CGFloat g = 0.f;
-//	CGFloat b = 0.f;
-//	CGFloat a = 1.f;
-//	[currentColor getRed:&r green:&g blue:&b alpha:&a];
-//	for (Beacon *beacon in beacons) {
-//		if ([beacon.uuid isEqualToString:RED_UUID]) {
-//			r = [self getComponentValueFromBeacon:_rBeacon];
-//		} else if ([beacon.name isEqualToString:self.gBeacon.name]) {
-//			r = [self getComponentValueFromBeacon:_bBeacon];
-//		} else if ([beacon.name isEqualToString:self.bBeacon.name]) {
-//			r = [self getComponentValueFromBeacon:_gBeacon];
-//		}
-//	}
-//	[self animateToColor:[UIColor colorWithRed:r green:g blue:b alpha:a]];
+	NSLog(@"%s\t :  R:%.2f G:%.2f B:%.2f", __PRETTY_FUNCTION__, r, g, b);
+	[self animateToColor:[UIColor colorWithRed:r green:g blue:b alpha:a]];
 }
 
 @end

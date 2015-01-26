@@ -98,13 +98,13 @@ static NSUInteger RegionsLimit = 20;
 
 - (Beacon *)handledBeaconForBeacon:(CLBeacon *)beacon
 {
-	Beacon *handledBeacon = self.handledBeacons[beacon.proximityUUID];
+	Beacon *handledBeacon = self.handledBeacons[[[Beacon alloc] initWithBeacon:beacon].baseData];
 	
 	if (handledBeacon == nil) {
 		Beacon *newHandledBeacon = [[Beacon alloc] initWithBeacon:beacon];
 		NSAssert(newHandledBeacon != nil, @"New beacon should be created.");
 		
-		self.handledBeacons[newHandledBeacon.description] = newHandledBeacon;
+		self.handledBeacons[newHandledBeacon.baseData] = newHandledBeacon;
 		handledBeacon = newHandledBeacon;
 	}
 	

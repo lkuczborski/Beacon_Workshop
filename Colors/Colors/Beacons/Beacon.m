@@ -59,6 +59,10 @@
 		return;
 	}
 	
+	if ([@(accuracy) compare:@(-1)] == NSOrderedSame) {
+		return;
+	}
+	
 	_accuracy = accuracy;
 	
 	[self updateMaxAccuracyWithAccuracy:accuracy];
@@ -67,12 +71,16 @@
 
 - (void)updateMaxAccuracyWithAccuracy:(CLLocationAccuracy)accuracy
 {
-	self.accuracyMax = fmax(self.accuracyMax, accuracy);
+	if ([@(self.accuracyMax) compare:@(accuracy)] == NSOrderedDescending) {
+		self.accuracyMax = accuracy;
+	}
 }
 
 - (void)updateMinAccuracyWithAccuracy:(CLLocationAccuracy)accuracy
 {
-	self.accuracyMin = fmin(self.accuracyMin, accuracy);
+	if ([@(self.accuracyMin) compare:@(accuracy)] == NSOrderedAscending) {
+		self.accuracyMin = accuracy;
+	}
 }
 
 #pragma mark RSSI
@@ -99,14 +107,20 @@
 	self.rssiMin = [@(fmin(self.rssiMin, rssi)) integerValue];
 }
 
+#pragma mark - Public API
+- (NSString *)baseData
+{
+	return [NSString stringWithFormat:@"UUID: %@\nMajor: %@\nMinor: %@",
+			self.uuid, [self.major stringValue], [self.minor stringValue]];
+}
+
 #pragma mark - Helpers
 
 -(NSString *)description
 {
     NSString *description = [super description];
     
-    return [NSString stringWithFormat:@"%@\nUUID: %@\nMajor: %@\nMinor: %@",
-            description, self.uuid, [self.major stringValue], [self.minor stringValue]];
+    return [NSString stringWithFormat:@"%@\n%@", description, [self baseData]];
 }
 
 @end

@@ -32,4 +32,6 @@
 
 - (instancetype)initWithBeacon:(CLBeacon *)beacon;
 
+- (NSString *)baseData;
+
 @end
