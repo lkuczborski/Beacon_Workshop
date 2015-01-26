@@ -111,6 +111,20 @@ static NSUInteger RegionsLimit = 20;
 
 #pragma mark - CLLocationManagerDelegate
 
+- (void)        locationManager:(CLLocationManager *)manager
+   didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+	if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+		
+		[self startMonitoringAllRegions];
+		
+		[self.locationManager startUpdatingLocation];
+	}
+	else if (status == kCLAuthorizationStatusNotDetermined) {
+		[self.locationManager requestWhenInUseAuthorization];
+	}
+}
+
 - (void)locationManager:(CLLocationManager *)manager
 		didRangeBeacons:(NSArray *)beacons
 			   inRegion:(CLBeaconRegion *)region
