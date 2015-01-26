@@ -98,7 +98,7 @@ static NSUInteger RegionsLimit = 20;
 
 - (Beacon *)handledBeaconForBeacon:(CLBeacon *)beacon
 {
-	Beacon *handledBeacon = self.handledBeacons[[[Beacon alloc] initWithBeacon:beacon].baseData];
+	Beacon *handledBeacon = self.handledBeacons[[Beacon baseDataFromBeacon:beacon]];
 	
 	if (handledBeacon == nil) {
 		Beacon *newHandledBeacon = [[Beacon alloc] initWithBeacon:beacon];

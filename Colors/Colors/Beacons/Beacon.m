@@ -108,6 +108,12 @@
 }
 
 #pragma mark - Public API
++ (NSString *)baseDataFromBeacon:(CLBeacon *)beacon
+{
+	return [NSString stringWithFormat:@"UUID: %@\nMajor: %@\nMinor: %@",
+			[beacon.proximityUUID UUIDString], [beacon.major stringValue], [beacon.minor stringValue]];
+}
+
 - (NSString *)baseData
 {
 	return [NSString stringWithFormat:@"UUID: %@\nMajor: %@\nMinor: %@",
