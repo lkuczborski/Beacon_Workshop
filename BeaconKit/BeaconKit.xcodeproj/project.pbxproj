@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B6A7EE61A777A8F001BB995 /* BeaconKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8B6A7EE51A777A8F001BB995 /* BeaconKit.h */; };
+		8B6A7EEE1A777A8F001BB995 /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6A7EE21A777A8F001BB995 /* libBeaconKit.a */; };
+		8B6A7F021A777B80001BB995 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6A7EFD1A777B80001BB995 /* Beacon.m */; };
+		8B6A7F031A777B80001BB995 /* BeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6A7EFF1A777B80001BB995 /* BeaconHandler.m */; };
+		8B6A7F041A777B80001BB995 /* BeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6A7F011A777B80001BB995 /* BeaconRegion.m */; };
+		8B6A7F0B1A777E1A001BB995 /* Beacon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8B6A7EFC1A777B80001BB995 /* Beacon.h */; };
+		8B6A7F0C1A777E1A001BB995 /* BeaconHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8B6A7EFE1A777B80001BB995 /* BeaconHandler.h */; };
+		8B6A7F0D1A777E1A001BB995 /* BeaconRegion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8B6A7F001A777B80001BB995 /* BeaconRegion.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B6A7EEF1A777A8F001BB995 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B6A7EDA1A777A8F001BB995 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B6A7EE11A777A8F001BB995;
+			remoteInfo = BeaconKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8B6A7EE01A777A8F001BB995 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				8B6A7F0B1A777E1A001BB995 /* Beacon.h in CopyFiles */,
+				8B6A7F0C1A777E1A001BB995 /* BeaconHandler.h in CopyFiles */,
+				8B6A7F0D1A777E1A001BB995 /* BeaconRegion.h in CopyFiles */,
+				8B6A7EE61A777A8F001BB995 /* BeaconKit.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8B6A7EE21A777A8F001BB995 /* libBeaconKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBeaconKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6A7EE51A777A8F001BB995 /* BeaconKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeaconKit.h; sourceTree = "<group>"; };
+		8B6A7EED1A777A8F001BB995 /* BeaconKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6A7EF31A777A8F001BB995 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B6A7EFC1A777B80001BB995 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
+		8B6A7EFD1A777B80001BB995 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
+		8B6A7EFE1A777B80001BB995 /* BeaconHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconHandler.h; sourceTree = "<group>"; };
+		8B6A7EFF1A777B80001BB995 /* BeaconHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconHandler.m; sourceTree = "<group>"; };
+		8B6A7F001A777B80001BB995 /* BeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconRegion.h; sourceTree = "<group>"; };
+		8B6A7F011A777B80001BB995 /* BeaconRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconRegion.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B6A7EDF1A777A8F001BB995 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6A7EEA1A777A8F001BB995 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6A7EEE1A777A8F001BB995 /* libBeaconKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B6A7ED91A777A8F001BB995 = {
+			isa = PBXGroup;
+			children = (
+				8B6A7EE41A777A8F001BB995 /* BeaconKit */,
+				8B6A7EF11A777A8F001BB995 /* BeaconKitTests */,
+				8B6A7EE31A777A8F001BB995 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B6A7EE31A777A8F001BB995 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B6A7EE21A777A8F001BB995 /* libBeaconKit.a */,
+				8B6A7EED1A777A8F001BB995 /* BeaconKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B6A7EE41A777A8F001BB995 /* BeaconKit */ = {
+			isa = PBXGroup;
+			children = (
+				8B6A7EE51A777A8F001BB995 /* BeaconKit.h */,
+				8B6A7EFC1A777B80001BB995 /* Beacon.h */,
+				8B6A7EFD1A777B80001BB995 /* Beacon.m */,
+				8B6A7EFE1A777B80001BB995 /* BeaconHandler.h */,
+				8B6A7EFF1A777B80001BB995 /* BeaconHandler.m */,
+				8B6A7F001A777B80001BB995 /* BeaconRegion.h */,
+				8B6A7F011A777B80001BB995 /* BeaconRegion.m */,
+			);
+			path = BeaconKit;
+			sourceTree = "<group>";
+		};
+		8B6A7EF11A777A8F001BB995 /* BeaconKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B6A7EF21A777A8F001BB995 /* Supporting Files */,
+			);
+			path = BeaconKitTests;
+			sourceTree = "<group>";
+		};
+		8B6A7EF21A777A8F001BB995 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B6A7EF31A777A8F001BB995 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B6A7EE11A777A8F001BB995 /* BeaconKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B6A7EF61A777A8F001BB995 /* Build configuration list for PBXNativeTarget "BeaconKit" */;
+			buildPhases = (
+				8B6A7EDE1A777A8F001BB995 /* Sources */,
+				8B6A7EDF1A777A8F001BB995 /* Frameworks */,
+				8B6A7EE01A777A8F001BB995 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeaconKit;
+			productName = BeaconKit;
+			productReference = 8B6A7EE21A777A8F001BB995 /* libBeaconKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8B6A7EEC1A777A8F001BB995 /* BeaconKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B6A7EF91A777A8F001BB995 /* Build configuration list for PBXNativeTarget "BeaconKitTests" */;
+			buildPhases = (
+				8B6A7EE91A777A8F001BB995 /* Sources */,
+				8B6A7EEA1A777A8F001BB995 /* Frameworks */,
+				8B6A7EEB1A777A8F001BB995 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B6A7EF01A777A8F001BB995 /* PBXTargetDependency */,
+			);
+			name = BeaconKitTests;
+			productName = BeaconKitTests;
+			productReference = 8B6A7EED1A777A8F001BB995 /* BeaconKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B6A7EDA1A777A8F001BB995 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = ACME;
+				TargetAttributes = {
+					8B6A7EE11A777A8F001BB995 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					8B6A7EEC1A777A8F001BB995 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 8B6A7EDD1A777A8F001BB995 /* Build configuration list for PBXProject "BeaconKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8B6A7ED91A777A8F001BB995;
+			productRefGroup = 8B6A7EE31A777A8F001BB995 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B6A7EE11A777A8F001BB995 /* BeaconKit */,
+				8B6A7EEC1A777A8F001BB995 /* BeaconKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B6A7EEB1A777A8F001BB995 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B6A7EDE1A777A8F001BB995 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6A7F041A777B80001BB995 /* BeaconRegion.m in Sources */,
+				8B6A7F021A777B80001BB995 /* Beacon.m in Sources */,
+				8B6A7F031A777B80001BB995 /* BeaconHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6A7EE91A777A8F001BB995 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B6A7EF01A777A8F001BB995 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B6A7EE11A777A8F001BB995 /* BeaconKit */;
+			targetProxy = 8B6A7EEF1A777A8F001BB995 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8B6A7EF41A777A8F001BB995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8B6A7EF51A777A8F001BB995 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B6A7EF71A777A8F001BB995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8B6A7EF81A777A8F001BB995 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8B6A7EFA1A777A8F001BB995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BeaconKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8B6A7EFB1A777A8F001BB995 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BeaconKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B6A7EDD1A777A8F001BB995 /* Build configuration list for PBXProject "BeaconKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6A7EF41A777A8F001BB995 /* Debug */,
+				8B6A7EF51A777A8F001BB995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B6A7EF61A777A8F001BB995 /* Build configuration list for PBXNativeTarget "BeaconKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6A7EF71A777A8F001BB995 /* Debug */,
+				8B6A7EF81A777A8F001BB995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8B6A7EF91A777A8F001BB995 /* Build configuration list for PBXNativeTarget "BeaconKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6A7EFA1A777A8F001BB995 /* Debug */,
+				8B6A7EFB1A777A8F001BB995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B6A7EDA1A777A8F001BB995 /* Project object */;
+}

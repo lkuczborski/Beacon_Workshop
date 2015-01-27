@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "BeaconHandler.h"
 
 static NSString *const RED_UUID   = @"430F6ED4-7E4F-4F63-85C7-845763861A55";
 static NSString *const BLUE_UUID  = @"B9407F30-F5F8-466E-AFF9-25556B57FE6D";
@@ -57,16 +56,14 @@ static NSString *const GREEN_UUID = @"3A7E7514-A9AC-41F3-A236-3CFCE75BAC95";
 }
 
 - (void)animateToColor:(UIColor*)color {
-	
-	self.view.backgroundColor = color;
-	
-	// TODO: find a nice way to animate this...
-//	[UIView animateWithDuration:1
-//						  delay:0
-//						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut
-//					 animations:^{
-//						 self.view.layer.backgroundColor = color.CGColor;
-//					 } completion:nil];
+
+    //TODO: find a nice way to animate this...
+	[UIView animateWithDuration:0.5
+						  delay:0
+						options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut
+					 animations:^{
+						 self.view.layer.backgroundColor = color.CGColor;
+					 } completion:nil];
 }
 
 #pragma mark - BeaconHandler

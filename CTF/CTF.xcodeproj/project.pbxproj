@@ -14,6 +14,7 @@
 		8B03B3011A6F9FFA003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3001A6F9FFA003FF5CF /* Images.xcassets */; };
 		8B03B3041A6F9FFA003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3021A6F9FFA003FF5CF /* LaunchScreen.xib */; };
 		8B03B3101A6F9FFA003FF5CF /* CTFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */; };
+		8B6A7F081A777BB8001BB995 /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6A7F071A777BB8001BB995 /* libBeaconKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		8B03B3091A6F9FFA003FF5CF /* CTFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CTFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B03B30E1A6F9FFA003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFTests.m; sourceTree = "<group>"; };
+		8B6A7F071A777BB8001BB995 /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../BeaconKit/build/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6A7F081A777BB8001BB995 /* libBeaconKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +92,7 @@
 				8B03B3001A6F9FFA003FF5CF /* Images.xcassets */,
 				8B03B3021A6F9FFA003FF5CF /* LaunchScreen.xib */,
 				8B03B2F31A6F9FFA003FF5CF /* Supporting Files */,
+				8B6A7F091A777BF9001BB995 /* Frameworks */,
 			);
 			path = CTF;
 			sourceTree = "<group>";
@@ -117,6 +121,14 @@
 				8B03B30E1A6F9FFA003FF5CF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B6A7F091A777BF9001BB995 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B6A7F071A777BB8001BB995 /* libBeaconKit.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +357,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CTF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -355,6 +371,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CTF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -412,6 +432,7 @@
 				8B03B3151A6F9FFA003FF5CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B03B3161A6F9FFA003FF5CF /* Build configuration list for PBXNativeTarget "CTFTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +441,7 @@
 				8B03B3181A6F9FFA003FF5CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

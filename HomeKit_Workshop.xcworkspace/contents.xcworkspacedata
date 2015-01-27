@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CTF/CTF.xcodeproj">
+      location = "group:BeaconKit/BeaconKit.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Colors/Colors.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CTF/CTF.xcodeproj">
    </FileRef>
 </Workspace>

@@ -14,9 +14,7 @@
 		8B03B2941A6F9FBE003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2931A6F9FBE003FF5CF /* Images.xcassets */; };
 		8B03B2971A6F9FBE003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2951A6F9FBE003FF5CF /* LaunchScreen.xib */; };
 		8B03B2A31A6F9FBE003FF5CF /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03B2A21A6F9FBE003FF5CF /* ColorsTests.m */; };
-		8B45A2AE1A71091D00AA5B3E /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B45A2A91A71091D00AA5B3E /* Beacon.m */; };
-		8B45A2AF1A71091D00AA5B3E /* BeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B45A2AB1A71091D00AA5B3E /* BeaconHandler.m */; };
-		8B45A2B01A71091D00AA5B3E /* BeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B45A2AD1A71091D00AA5B3E /* BeaconRegion.m */; };
+		8B6A7F061A777BA2001BB995 /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6A7F051A777BA2001BB995 /* libBeaconKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +41,7 @@
 		8B03B29C1A6F9FBE003FF5CF /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B03B2A11A6F9FBE003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B2A21A6F9FBE003FF5CF /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
-		8B45A2A81A71091D00AA5B3E /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
-		8B45A2A91A71091D00AA5B3E /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
-		8B45A2AA1A71091D00AA5B3E /* BeaconHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconHandler.h; sourceTree = "<group>"; };
-		8B45A2AB1A71091D00AA5B3E /* BeaconHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconHandler.m; sourceTree = "<group>"; };
-		8B45A2AC1A71091D00AA5B3E /* BeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconRegion.h; sourceTree = "<group>"; };
-		8B45A2AD1A71091D00AA5B3E /* BeaconRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconRegion.m; sourceTree = "<group>"; };
+		8B6A7F051A777BA2001BB995 /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../BeaconKit/build/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6A7F061A777BA2001BB995 /* libBeaconKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +84,6 @@
 		8B03B2851A6F9FBE003FF5CF /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				8B45A2A71A71091D00AA5B3E /* Beacons */,
 				8B03B28A1A6F9FBE003FF5CF /* AppDelegate.h */,
 				8B03B28B1A6F9FBE003FF5CF /* AppDelegate.m */,
 				8B03B28D1A6F9FBE003FF5CF /* ViewController.h */,
@@ -99,6 +92,7 @@
 				8B03B2931A6F9FBE003FF5CF /* Images.xcassets */,
 				8B03B2951A6F9FBE003FF5CF /* LaunchScreen.xib */,
 				8B03B2861A6F9FBE003FF5CF /* Supporting Files */,
+				8B6A7F0A1A777C0C001BB995 /* Frameworks */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -129,17 +123,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8B45A2A71A71091D00AA5B3E /* Beacons */ = {
+		8B6A7F0A1A777C0C001BB995 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8B45A2A81A71091D00AA5B3E /* Beacon.h */,
-				8B45A2A91A71091D00AA5B3E /* Beacon.m */,
-				8B45A2AA1A71091D00AA5B3E /* BeaconHandler.h */,
-				8B45A2AB1A71091D00AA5B3E /* BeaconHandler.m */,
-				8B45A2AC1A71091D00AA5B3E /* BeaconRegion.h */,
-				8B45A2AD1A71091D00AA5B3E /* BeaconRegion.m */,
+				8B6A7F051A777BA2001BB995 /* libBeaconKit.a */,
 			);
-			path = Beacons;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,10 +233,7 @@
 			files = (
 				8B03B28F1A6F9FBE003FF5CF /* ViewController.m in Sources */,
 				8B03B28C1A6F9FBE003FF5CF /* AppDelegate.m in Sources */,
-				8B45A2AE1A71091D00AA5B3E /* Beacon.m in Sources */,
-				8B45A2B01A71091D00AA5B3E /* BeaconRegion.m in Sources */,
 				8B03B2891A6F9FBE003FF5CF /* main.m in Sources */,
-				8B45A2AF1A71091D00AA5B3E /* BeaconHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +357,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Colors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -381,6 +371,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Colors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

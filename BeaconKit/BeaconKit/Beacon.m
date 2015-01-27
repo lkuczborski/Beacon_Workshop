@@ -22,7 +22,7 @@
 
 @implementation Beacon
 
-#pragma mark - LiceCycle
+#pragma mark - Lifecycle
 
 - (instancetype)initWithUUID:(NSString *)uuid
                        major:(NSNumber *)major
