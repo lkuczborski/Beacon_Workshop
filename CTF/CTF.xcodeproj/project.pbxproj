@@ -15,6 +15,14 @@
 		8B03B3041A6F9FFA003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3021A6F9FFA003FF5CF /* LaunchScreen.xib */; };
 		8B03B3101A6F9FFA003FF5CF /* CTFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */; };
 		8B6A7F081A777BB8001BB995 /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6A7F071A777BB8001BB995 /* libBeaconKit.a */; };
+		BA027A101A778B3D00ED1424 /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */; };
+		BA027A211A778B7100ED1424 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A131A778B7100ED1424 /* DDAbstractDatabaseLogger.m */; };
+		BA027A221A778B7100ED1424 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A151A778B7100ED1424 /* DDASLLogger.m */; };
+		BA027A231A778B7100ED1424 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A171A778B7100ED1424 /* DDFileLogger.m */; };
+		BA027A241A778B7100ED1424 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A191A778B7100ED1424 /* DDLog.m */; };
+		BA027A251A778B7100ED1424 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1B1A778B7100ED1424 /* DDTTYLogger.m */; };
+		BA027A261A778B7100ED1424 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */; };
+		BA027A271A778B7100ED1424 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +50,21 @@
 		8B03B30E1A6F9FFA003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFTests.m; sourceTree = "<group>"; };
 		8B6A7F071A777BB8001BB995 /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../BeaconKit/build/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
+		BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HueSDK_iOS.framework; sourceTree = "<group>"; };
+		BA027A121A778B7100ED1424 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		BA027A131A778B7100ED1424 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		BA027A141A778B7100ED1424 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		BA027A151A778B7100ED1424 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		BA027A161A778B7100ED1424 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		BA027A171A778B7100ED1424 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		BA027A181A778B7100ED1424 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		BA027A191A778B7100ED1424 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		BA027A1A1A778B7100ED1424 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		BA027A1B1A778B7100ED1424 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		BA027A1D1A778B7100ED1424 /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		BA027A1F1A778B7100ED1424 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA027A101A778B3D00ED1424 /* HueSDK_iOS.framework in Frameworks */,
 				8B6A7F081A777BB8001BB995 /* libBeaconKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,9 +150,40 @@
 		8B6A7F091A777BF9001BB995 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA027A111A778B7100ED1424 /* Lumberjack */,
+				BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */,
 				8B6A7F071A777BB8001BB995 /* libBeaconKit.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA027A111A778B7100ED1424 /* Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				BA027A121A778B7100ED1424 /* DDAbstractDatabaseLogger.h */,
+				BA027A131A778B7100ED1424 /* DDAbstractDatabaseLogger.m */,
+				BA027A141A778B7100ED1424 /* DDASLLogger.h */,
+				BA027A151A778B7100ED1424 /* DDASLLogger.m */,
+				BA027A161A778B7100ED1424 /* DDFileLogger.h */,
+				BA027A171A778B7100ED1424 /* DDFileLogger.m */,
+				BA027A181A778B7100ED1424 /* DDLog.h */,
+				BA027A191A778B7100ED1424 /* DDLog.m */,
+				BA027A1A1A778B7100ED1424 /* DDTTYLogger.h */,
+				BA027A1B1A778B7100ED1424 /* DDTTYLogger.m */,
+				BA027A1C1A778B7100ED1424 /* Extensions */,
+			);
+			path = Lumberjack;
+			sourceTree = "<group>";
+		};
+		BA027A1C1A778B7100ED1424 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA027A1D1A778B7100ED1424 /* ContextFilterLogFormatter.h */,
+				BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */,
+				BA027A1F1A778B7100ED1424 /* DispatchQueueLogFormatter.h */,
+				BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA027A241A778B7100ED1424 /* DDLog.m in Sources */,
+				BA027A251A778B7100ED1424 /* DDTTYLogger.m in Sources */,
 				8B03B2FC1A6F9FFA003FF5CF /* ViewController.m in Sources */,
+				BA027A231A778B7100ED1424 /* DDFileLogger.m in Sources */,
 				8B03B2F91A6F9FFA003FF5CF /* AppDelegate.m in Sources */,
+				BA027A271A778B7100ED1424 /* DispatchQueueLogFormatter.m in Sources */,
+				BA027A211A778B7100ED1424 /* DDAbstractDatabaseLogger.m in Sources */,
 				8B03B2F61A6F9FFA003FF5CF /* main.m in Sources */,
+				BA027A221A778B7100ED1424 /* DDASLLogger.m in Sources */,
+				BA027A261A778B7100ED1424 /* ContextFilterLogFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +417,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CTF",
+				);
 				INFOPLIST_FILE = CTF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -369,6 +435,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CTF",
+				);
 				INFOPLIST_FILE = CTF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
