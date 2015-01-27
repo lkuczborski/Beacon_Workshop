@@ -46,7 +46,7 @@
     // Create sdk instance
     self.phHueSDK = [[PHHueSDK alloc] init];
     [self.phHueSDK startUpSDK];
-    [self.phHueSDK enableLogging:YES];
+    [self.phHueSDK enableLogging:NO];
     // Create the main view controller in a navigation controller and make the navigation controller the rootviewcontroller of the app
     ViewController *controlLightsViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"mainViewController"];
     
@@ -197,6 +197,7 @@
             [self.noConnectionAlert dismissWithClickedButtonIndex:[self.noConnectionAlert cancelButtonIndex] animated:YES];
             self.noConnectionAlert = nil;
         }
+        [self.controlLightsViewController pairBulbsWithBeacons];
         [self removeLoadingView];
         
     }
@@ -379,6 +380,7 @@
     
     // Remove pushlink view controller
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self.controlLightsViewController pairBulbsWithBeacons];
     self.pushLinkViewController = nil;
     
     // Start local heartbeat
