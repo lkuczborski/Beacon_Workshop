@@ -427,6 +427,7 @@
 					"$(inherited)",
 					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -445,6 +446,7 @@
 					"$(inherited)",
 					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

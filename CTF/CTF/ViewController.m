@@ -10,6 +10,12 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *currentTeam;
+
+@property (weak, nonatomic) IBOutlet UIView *hue1;
+@property (weak, nonatomic) IBOutlet UIView *hue2;
+@property (weak, nonatomic) IBOutlet UIView *hue3;
+
 @end
 
 @implementation ViewController
@@ -19,9 +25,11 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+#pragma mark - Team Select Action
+
+- (IBAction)switchTeam:(UIControl *)sender {
+    
+    self.currentTeam.backgroundColor = sender.backgroundColor;
+}
 @end
