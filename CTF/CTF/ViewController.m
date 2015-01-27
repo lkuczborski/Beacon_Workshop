@@ -11,6 +11,8 @@
 #import <BeaconKit/BeaconKit.h>
 #import <HueSDK_iOS/HueSDK.h>
 
+#define MAX_HUE 65535
+
 static NSString *const HUE_1 = @"430F6ED4-7E4F-4F63-85C7-845763861A55";
 static NSString *const HUE_2 = @"B9407F30-F5F8-466E-AFF9-25556B57FE6D";
 static NSString *const HUE_3 = @"3A7E7514-A9AC-41F3-A236-3CFCE75BAC95";
@@ -42,6 +44,34 @@ static NSString *const HUE_3 = @"3A7E7514-A9AC-41F3-A236-3CFCE75BAC95";
 - (IBAction)switchTeam:(UIControl *)sender {
     
     self.currentTeam.backgroundColor = sender.backgroundColor;
+    
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
+    
+    CGFloat hue, saturation;
+    [sender.backgroundColor getHue:&hue saturation:&saturation brightness:nil alpha:nil];
+    
+    
+    cache.lights
+    for (PHLight *light in cache.lights.allValues) {
+        
+        PHLightState *lightState = [[PHLightState alloc] init];
+        
+        
+        [lightState setHue:@(hue * MAX_HUE)];
+        [lightState setBrightness:[NSNumber numberWithInt:0]];
+        [lightState setSaturation:@(saturation * 254)];
+        
+        // Send lightstate to light
+        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
+            if (errors != nil) {
+                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
+                
+                NSLog(@"Response: %@",message);
+            }
+            
+        }];
+    }
 }
 
 #pragma mark - Hue Changes

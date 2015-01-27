@@ -15,6 +15,14 @@
 		8B03B3041A6F9FFA003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3021A6F9FFA003FF5CF /* LaunchScreen.xib */; };
 		8B03B3101A6F9FFA003FF5CF /* CTFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */; };
 		8B6A7F081A777BB8001BB995 /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6A7F071A777BB8001BB995 /* libBeaconKit.a */; };
+		9EC5B1CA1A7798BB001934AD /* PHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */; };
+		9EC5B1CB1A7798BB001934AD /* PHLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */; };
+		9EC5B1CC1A7798BB001934AD /* PHBridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C21A7798BB001934AD /* PHBridgePushLinkViewController.m */; };
+		9EC5B1CD1A7798BB001934AD /* PHBridgePushLinkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C31A7798BB001934AD /* PHBridgePushLinkViewController.xib */; };
+		9EC5B1CE1A7798BB001934AD /* PHBridgeSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C51A7798BB001934AD /* PHBridgeSelectionViewController.m */; };
+		9EC5B1CF1A7798BB001934AD /* PHBridgeSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C61A7798BB001934AD /* PHBridgeSelectionViewController.xib */; };
+		9EC5B1D01A7798BB001934AD /* press_smartbridge.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C81A7798BB001934AD /* press_smartbridge.png */; };
+		9EC5B1D11A7798BB001934AD /* press_smartbridge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C91A7798BB001934AD /* press_smartbridge@2x.png */; };
 		BA027A101A778B3D00ED1424 /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */; };
 		BA027A211A778B7100ED1424 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A131A778B7100ED1424 /* DDAbstractDatabaseLogger.m */; };
 		BA027A221A778B7100ED1424 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A151A778B7100ED1424 /* DDASLLogger.m */; };
@@ -50,6 +58,17 @@
 		8B03B30E1A6F9FFA003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFTests.m; sourceTree = "<group>"; };
 		8B6A7F071A777BB8001BB995 /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../BeaconKit/build/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
+		9EC5B1BE1A7798BB001934AD /* PHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoadingViewController.h; sourceTree = "<group>"; };
+		9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoadingViewController.m; sourceTree = "<group>"; };
+		9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLoadingViewController.xib; sourceTree = "<group>"; };
+		9EC5B1C11A7798BB001934AD /* PHBridgePushLinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHBridgePushLinkViewController.h; sourceTree = "<group>"; };
+		9EC5B1C21A7798BB001934AD /* PHBridgePushLinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHBridgePushLinkViewController.m; sourceTree = "<group>"; };
+		9EC5B1C31A7798BB001934AD /* PHBridgePushLinkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHBridgePushLinkViewController.xib; sourceTree = "<group>"; };
+		9EC5B1C41A7798BB001934AD /* PHBridgeSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHBridgeSelectionViewController.h; sourceTree = "<group>"; };
+		9EC5B1C51A7798BB001934AD /* PHBridgeSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHBridgeSelectionViewController.m; sourceTree = "<group>"; };
+		9EC5B1C61A7798BB001934AD /* PHBridgeSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHBridgeSelectionViewController.xib; sourceTree = "<group>"; };
+		9EC5B1C81A7798BB001934AD /* press_smartbridge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = press_smartbridge.png; sourceTree = "<group>"; };
+		9EC5B1C91A7798BB001934AD /* press_smartbridge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "press_smartbridge@2x.png"; sourceTree = "<group>"; };
 		BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HueSDK_iOS.framework; sourceTree = "<group>"; };
 		BA027A121A778B7100ED1424 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		BA027A131A778B7100ED1424 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
@@ -108,6 +127,7 @@
 		8B03B2F21A6F9FFA003FF5CF /* CTF */ = {
 			isa = PBXGroup;
 			children = (
+				9EC5B1BC1A7798BB001934AD /* SDKWizard */,
 				8B03B2F71A6F9FFA003FF5CF /* AppDelegate.h */,
 				8B03B2F81A6F9FFA003FF5CF /* AppDelegate.m */,
 				8B03B2FA1A6F9FFA003FF5CF /* ViewController.h */,
@@ -155,6 +175,40 @@
 				8B6A7F071A777BB8001BB995 /* libBeaconKit.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EC5B1BC1A7798BB001934AD /* SDKWizard */ = {
+			isa = PBXGroup;
+			children = (
+				9EC5B1BD1A7798BB001934AD /* LoadingView */,
+				9EC5B1C11A7798BB001934AD /* PHBridgePushLinkViewController.h */,
+				9EC5B1C21A7798BB001934AD /* PHBridgePushLinkViewController.m */,
+				9EC5B1C31A7798BB001934AD /* PHBridgePushLinkViewController.xib */,
+				9EC5B1C41A7798BB001934AD /* PHBridgeSelectionViewController.h */,
+				9EC5B1C51A7798BB001934AD /* PHBridgeSelectionViewController.m */,
+				9EC5B1C61A7798BB001934AD /* PHBridgeSelectionViewController.xib */,
+				9EC5B1C71A7798BB001934AD /* Resources */,
+			);
+			path = SDKWizard;
+			sourceTree = "<group>";
+		};
+		9EC5B1BD1A7798BB001934AD /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				9EC5B1BE1A7798BB001934AD /* PHLoadingViewController.h */,
+				9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */,
+				9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		9EC5B1C71A7798BB001934AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9EC5B1C81A7798BB001934AD /* press_smartbridge.png */,
+				9EC5B1C91A7798BB001934AD /* press_smartbridge@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		BA027A111A778B7100ED1424 /* Lumberjack */ = {
@@ -266,7 +320,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EC5B1CF1A7798BB001934AD /* PHBridgeSelectionViewController.xib in Resources */,
+				9EC5B1D01A7798BB001934AD /* press_smartbridge.png in Resources */,
 				8B03B2FF1A6F9FFA003FF5CF /* Main.storyboard in Resources */,
+				9EC5B1CD1A7798BB001934AD /* PHBridgePushLinkViewController.xib in Resources */,
+				9EC5B1CB1A7798BB001934AD /* PHLoadingViewController.xib in Resources */,
+				9EC5B1D11A7798BB001934AD /* press_smartbridge@2x.png in Resources */,
 				8B03B3041A6F9FFA003FF5CF /* LaunchScreen.xib in Resources */,
 				8B03B3011A6F9FFA003FF5CF /* Images.xcassets in Resources */,
 			);
@@ -288,12 +347,15 @@
 			files = (
 				BA027A241A778B7100ED1424 /* DDLog.m in Sources */,
 				BA027A251A778B7100ED1424 /* DDTTYLogger.m in Sources */,
+				9EC5B1CC1A7798BB001934AD /* PHBridgePushLinkViewController.m in Sources */,
 				8B03B2FC1A6F9FFA003FF5CF /* ViewController.m in Sources */,
 				BA027A231A778B7100ED1424 /* DDFileLogger.m in Sources */,
+				9EC5B1CE1A7798BB001934AD /* PHBridgeSelectionViewController.m in Sources */,
 				8B03B2F91A6F9FFA003FF5CF /* AppDelegate.m in Sources */,
 				BA027A271A778B7100ED1424 /* DispatchQueueLogFormatter.m in Sources */,
 				BA027A211A778B7100ED1424 /* DDAbstractDatabaseLogger.m in Sources */,
 				8B03B2F61A6F9FFA003FF5CF /* main.m in Sources */,
+				9EC5B1CA1A7798BB001934AD /* PHLoadingViewController.m in Sources */,
 				BA027A221A778B7100ED1424 /* DDASLLogger.m in Sources */,
 				BA027A261A778B7100ED1424 /* ContextFilterLogFormatter.m in Sources */,
 			);
