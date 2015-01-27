@@ -27,8 +27,6 @@ static NSString *const GREEN_UUID = @"3A7E7514-A9AC-41F3-A236-3CFCE75BAC95";
 	[self setupBeaconHandler];
 }
 
-- (IBAction)switchTeam:(UIControl *)sender {
-}
 - (CGFloat)getComponentValueFromBeacon:(Beacon *)beacon {
 
 	// http://stn.spotfire.com/spotfire_client_help/norm/norm_scale_between_0_and_1.htm
