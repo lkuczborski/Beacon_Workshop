@@ -19,12 +19,17 @@
 @property (assign, nonatomic) CLProximity proximity;
 
 @property (assign, readwrite, nonatomic) CLLocationAccuracy accuracy;
-@property (assign, readonly) CLLocationAccuracy accuracyMax;
-@property (assign, readonly) CLLocationAccuracy accuracyMin;
+@property (assign, readonly, nonatomic) CLLocationAccuracy accuracyMax;
+@property (assign, readonly, nonatomic) CLLocationAccuracy accuracyMin;
 
 @property (assign, nonatomic) NSInteger rssi;
-@property (assign, readonly) NSInteger rssiMax;
-@property (assign, readonly) NSInteger rssiMin;
+@property (assign, readonly, nonatomic) NSInteger rssiMax;
+@property (assign, readonly, nonatomic) NSInteger rssiMin;
+
+@property (nonatomic, strong) NSNumber *customAccuracyMax;
+@property (nonatomic, strong) NSNumber *customAccuracyMin;
+@property (nonatomic, strong) NSNumber *customRSSIMax;
+@property (nonatomic, strong) NSNumber *customRSSIMin;
 
 - (instancetype)initWithUUID:(NSString *)uuid
                        major:(NSNumber *)major
