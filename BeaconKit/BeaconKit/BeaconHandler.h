@@ -15,6 +15,8 @@
 
 @class BeaconHandler;
 
+extern NSString *const BeaconHandlerDidUpdateBeaconsNotification;
+
 @protocol BeaconEventHandler <NSObject>
 
 - (void)beaconHandler:(BeaconHandler *)handler
@@ -23,6 +25,8 @@
 @end
 
 @interface BeaconHandler : NSObject
+
+@property (nonatomic, weak) id <BeaconEventHandler> delegate;
 
 - (instancetype)initWithBeaconRegions:(NSArray *)regions
                              delegate:(id <BeaconEventHandler>)delegate NS_DESIGNATED_INITIALIZER;

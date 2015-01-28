@@ -14,8 +14,8 @@
 		8B03B2941A6F9FBE003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2931A6F9FBE003FF5CF /* Images.xcassets */; };
 		8B03B2971A6F9FBE003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2951A6F9FBE003FF5CF /* LaunchScreen.xib */; };
 		8B03B2A31A6F9FBE003FF5CF /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03B2A21A6F9FBE003FF5CF /* ColorsTests.m */; };
-		BAD2B1DF1A79369C0088EDE5 /* BeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADAE83C1A79323C006505B7 /* BeaconKit.framework */; };
-		BAD2B1E01A79369C0088EDE5 /* BeaconKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BADAE83C1A79323C006505B7 /* BeaconKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BBFA8A251A7960840057FD65 /* BeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFA8A241A7960840057FD65 /* BeaconKit.framework */; };
+		BBFA8A261A7960840057FD65 /* BeaconKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBFA8A241A7960840057FD65 /* BeaconKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BAD2B1E11A79369C0088EDE5 /* Embed Frameworks */ = {
+		BBFA8A271A7960840057FD65 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BAD2B1E01A79369C0088EDE5 /* BeaconKit.framework in Embed Frameworks */,
+				BBFA8A261A7960840057FD65 /* BeaconKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +56,7 @@
 		8B03B29C1A6F9FBE003FF5CF /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B03B2A11A6F9FBE003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B2A21A6F9FBE003FF5CF /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
-		BADAE83C1A79323C006505B7 /* BeaconKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BeaconKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/HomeKit_Workshop-goxyvjzztlqtlqejflvayzyjliuo/Build/Products/Debug-iphoneos/BeaconKit.framework"; sourceTree = "<group>"; };
+		BBFA8A241A7960840057FD65 /* BeaconKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = BeaconKit.framework; path = "/Users/developerios/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/BeaconKit.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAD2B1DF1A79369C0088EDE5 /* BeaconKit.framework in Frameworks */,
+				BBFA8A251A7960840057FD65 /* BeaconKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +141,7 @@
 		8B6A7F0A1A777C0C001BB995 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BADAE83C1A79323C006505B7 /* BeaconKit.framework */,
+				BBFA8A241A7960840057FD65 /* BeaconKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 				8B03B27F1A6F9FBE003FF5CF /* Sources */,
 				8B03B2801A6F9FBE003FF5CF /* Frameworks */,
 				8B03B2811A6F9FBE003FF5CF /* Resources */,
-				BAD2B1E11A79369C0088EDE5 /* Embed Frameworks */,
+				BBFA8A271A7960840057FD65 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -374,6 +374,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-goxyvjzztlqtlqejflvayzyjliuo/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Colors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -392,6 +393,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-goxyvjzztlqtlqejflvayzyjliuo/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Colors/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

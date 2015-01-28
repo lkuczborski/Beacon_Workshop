@@ -8,6 +8,6 @@
       location = "group:Colors/Colors.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:CTF/CTF.xcodeproj">
+      location = "container:CTF/CTF.xcodeproj">
    </FileRef>
 </Workspace>
