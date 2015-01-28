@@ -14,7 +14,6 @@
 		8B03B3011A6F9FFA003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3001A6F9FFA003FF5CF /* Images.xcassets */; };
 		8B03B3041A6F9FFA003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3021A6F9FFA003FF5CF /* LaunchScreen.xib */; };
 		8B03B3101A6F9FFA003FF5CF /* CTFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */; };
-		8B6A7F081A777BB8001BB995 /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B6A7F071A777BB8001BB995 /* libBeaconKit.a */; };
 		9EC5B1CA1A7798BB001934AD /* PHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */; };
 		9EC5B1CB1A7798BB001934AD /* PHLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */; };
 		9EC5B1CC1A7798BB001934AD /* PHBridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C21A7798BB001934AD /* PHBridgePushLinkViewController.m */; };
@@ -31,6 +30,8 @@
 		BA027A251A778B7100ED1424 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1B1A778B7100ED1424 /* DDTTYLogger.m */; };
 		BA027A261A778B7100ED1424 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */; };
 		BA027A271A778B7100ED1424 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */; };
+		BAD2B1E21A7936D80088EDE5 /* BeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADAE83E1A7932C7006505B7 /* BeaconKit.framework */; };
+		BAD2B1E31A7936D80088EDE5 /* BeaconKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BADAE83E1A7932C7006505B7 /* BeaconKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,20 @@
 			remoteInfo = CTF;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BAD2B1E41A7936D80088EDE5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BAD2B1E31A7936D80088EDE5 /* BeaconKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8B03B2F01A6F9FFA003FF5CF /* CTF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTF.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +72,6 @@
 		8B03B3091A6F9FFA003FF5CF /* CTFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CTFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B03B30E1A6F9FFA003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFTests.m; sourceTree = "<group>"; };
-		8B6A7F071A777BB8001BB995 /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../BeaconKit/build/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 		9EC5B1BE1A7798BB001934AD /* PHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoadingViewController.h; sourceTree = "<group>"; };
 		9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoadingViewController.m; sourceTree = "<group>"; };
 		9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLoadingViewController.xib; sourceTree = "<group>"; };
@@ -84,6 +98,7 @@
 		BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		BA027A1F1A778B7100ED1424 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		BADAE83E1A7932C7006505B7 /* BeaconKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BeaconKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/HomeKit_Workshop-goxyvjzztlqtlqejflvayzyjliuo/Build/Products/Debug-iphoneos/BeaconKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA027A101A778B3D00ED1424 /* HueSDK_iOS.framework in Frameworks */,
-				8B6A7F081A777BB8001BB995 /* libBeaconKit.a in Frameworks */,
+				BAD2B1E21A7936D80088EDE5 /* BeaconKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				BA027A111A778B7100ED1424 /* Lumberjack */,
+				BADAE83E1A7932C7006505B7 /* BeaconKit.framework */,
 				BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */,
-				8B6A7F071A777BB8001BB995 /* libBeaconKit.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,6 +265,7 @@
 				8B03B2EC1A6F9FFA003FF5CF /* Sources */,
 				8B03B2ED1A6F9FFA003FF5CF /* Frameworks */,
 				8B03B2EE1A6F9FFA003FF5CF /* Resources */,
+				BAD2B1E41A7936D80088EDE5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -482,6 +498,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CTF",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-goxyvjzztlqtlqejflvayzyjliuo/Build/Products/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = CTF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -501,6 +518,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CTF",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-goxyvjzztlqtlqejflvayzyjliuo/Build/Products/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = CTF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

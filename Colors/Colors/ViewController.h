@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 ACME. All rights reserved.
 //
 
+@import BeaconKit;
+
 #import <UIKit/UIKit.h>
-#import <BeaconKit/BeaconKit.h>
 
 @interface ViewController : UIViewController <BeaconEventHandler>
 

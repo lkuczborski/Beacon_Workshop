@@ -2,11 +2,20 @@
 //  BeaconKit.h
 //  BeaconKit
 //
-//  Created by Lukasz Kuczborski on 27.01.2015.
-//  Copyright (c) 2015 ACME. All rights reserved.
+//  Created by Lukasz Stocki on 28.01.2015.
+//  Copyright (c) 2015 Allegro Group. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+//! Project version number for BeaconKit.
+FOUNDATION_EXPORT double BeaconKitVersionNumber;
+
+//! Project version string for BeaconKit.
+FOUNDATION_EXPORT const unsigned char BeaconKitVersionString[];
+
+// In this header, you should import all the public headers of your framework using statements like #import <BeaconKit/PublicHeader.h>
+
 #import "Beacon.h"
 #import "BeaconHandler.h"
 #import "BeaconRegion.h"
