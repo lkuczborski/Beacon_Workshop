@@ -8,6 +8,7 @@
 
 @import Foundation;
 @import CoreLocation;
+@import UIKit;
 
 #import "Beacon.h"
 #import "BeaconRegion.h"
@@ -27,5 +28,7 @@
                              delegate:(id <BeaconEventHandler>)delegate NS_DESIGNATED_INITIALIZER;
 
 - (void)start;
+
+- (void)showCalibrationUIFromViewConfroller:(UIViewController *)fromViewController;
 
 @end

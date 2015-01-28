@@ -9,6 +9,8 @@
 #import "BeaconHandler.h"
 
 static NSUInteger RegionsLimit = 20;
+static NSString *const BUNDLE_ID     = @"com.allegrogroup.BeaconKit";
+static NSString *const STORYBOARD_ID = @"BeaconKitUI";
 
 @interface BeaconHandler () <CLLocationManagerDelegate>
 
@@ -27,7 +29,7 @@ static NSUInteger RegionsLimit = 20;
 @implementation BeaconHandler
 
 - (instancetype)initWithBeaconRegions:(NSArray *)regions
-                            delegate:(id<BeaconEventHandler>)delegate
+                             delegate:(id<BeaconEventHandler>)delegate
 {
     NSAssert((regions.count <= RegionsLimit), @"iOS applications have limit on max amount of regions");
     
@@ -37,7 +39,7 @@ static NSUInteger RegionsLimit = 20;
         _locationManager.delegate = self;
         
         _beacons = [NSMutableArray array];
-		_handledBeacons = [NSMutableDictionary dictionary];
+        _handledBeacons = [NSMutableDictionary dictionary];
         
         _delegate = delegate;
         
@@ -54,6 +56,22 @@ static NSUInteger RegionsLimit = 20;
         [self registerRegions];
     }
 }
+
+- (void)showCalibrationUIFromViewConfroller:(UIViewController *)fromViewController
+{
+    NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:BUNDLE_ID];
+    UIStoryboard *beaconKitStoryBoard = [UIStoryboard storyboardWithName:STORYBOARD_ID
+                                                                  bundle:frameworkBundle];
+    
+    UIViewController *cvToPresent = [beaconKitStoryBoard instantiateInitialViewController];
+    
+    [fromViewController presentViewController:cvToPresent
+                                     animated:YES
+                                   completion:nil];
+}
+
+
+#pragma mark - Private API
 
 - (void)registerRegions
 {
@@ -76,39 +94,37 @@ static NSUInteger RegionsLimit = 20;
     
     [_locationManager startMonitoringForRegion:region];
     [_locationManager startRangingBeaconsInRegion:region];
-	
-	return region;
+    
+    return region;
 }
-
-#pragma mark - Private API
 
 - (Beacon *)updateBeacon:(CLBeacon *)beacon
 {
-	Beacon *handledBeacon = [self handledBeaconForBeacon:beacon];
-	NSAssert(handledBeacon != nil, @"This should not be nil!");
-	
-	handledBeacon.proximity = beacon.proximity;
-	handledBeacon.accuracy = beacon.accuracy;
-	handledBeacon.rssi = beacon.rssi;
-	
-	return handledBeacon;
+    Beacon *handledBeacon = [self handledBeaconForBeacon:beacon];
+    NSAssert(handledBeacon != nil, @"This should not be nil!");
+    
+    handledBeacon.proximity = beacon.proximity;
+    handledBeacon.accuracy = beacon.accuracy;
+    handledBeacon.rssi = beacon.rssi;
+    
+    return handledBeacon;
 }
 
 #pragma mark - Helper Methods
 
 - (Beacon *)handledBeaconForBeacon:(CLBeacon *)beacon
 {
-	Beacon *handledBeacon = self.handledBeacons[[Beacon baseDataFromBeacon:beacon]];
-	
-	if (handledBeacon == nil) {
-		Beacon *newHandledBeacon = [[Beacon alloc] initWithBeacon:beacon];
-		NSAssert(newHandledBeacon != nil, @"New beacon should be created.");
-		
-		self.handledBeacons[newHandledBeacon.baseData] = newHandledBeacon;
-		handledBeacon = newHandledBeacon;
-	}
-	
-	return handledBeacon;
+    Beacon *handledBeacon = self.handledBeacons[[Beacon baseDataFromBeacon:beacon]];
+    
+    if (handledBeacon == nil) {
+        Beacon *newHandledBeacon = [[Beacon alloc] initWithBeacon:beacon];
+        NSAssert(newHandledBeacon != nil, @"New beacon should be created.");
+        
+        self.handledBeacons[newHandledBeacon.baseData] = newHandledBeacon;
+        handledBeacon = newHandledBeacon;
+    }
+    
+    return handledBeacon;
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -116,33 +132,33 @@ static NSUInteger RegionsLimit = 20;
 - (void)        locationManager:(CLLocationManager *)manager
    didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
-	if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
-		
-		[self start];
-		
-		[self.locationManager startUpdatingLocation];
-	}
-	else if (status == kCLAuthorizationStatusNotDetermined) {
-		[self.locationManager requestWhenInUseAuthorization];
-	}
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        
+        [self start];
+        
+        [self.locationManager startUpdatingLocation];
+    }
+    else if (status == kCLAuthorizationStatusNotDetermined) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
 }
 
 - (void)locationManager:(CLLocationManager *)manager
-		didRangeBeacons:(NSArray *)beacons
-			   inRegion:(CLBeaconRegion *)region
+        didRangeBeacons:(NSArray *)beacons
+               inRegion:(CLBeaconRegion *)region
 {
-	NSMutableArray *updatedBeacons = [NSMutableArray array];
-	
-	for (CLBeacon *beacon in beacons) {
-		Beacon *updatedBeacon = [self updateBeacon:beacon];
-		if (updatedBeacon) {
-			
-			[updatedBeacons addObject:updatedBeacon];
-		}
-	}
-	
-	[self.delegate beaconHandler:self
-				didUpdateBeacons:[NSArray arrayWithArray:updatedBeacons]];
+    NSMutableArray *updatedBeacons = [NSMutableArray array];
+    
+    for (CLBeacon *beacon in beacons) {
+        Beacon *updatedBeacon = [self updateBeacon:beacon];
+        if (updatedBeacon) {
+            
+            [updatedBeacons addObject:updatedBeacon];
+        }
+    }
+    
+    [self.delegate beaconHandler:self
+                didUpdateBeacons:[NSArray arrayWithArray:updatedBeacons]];
 }
 
 @end

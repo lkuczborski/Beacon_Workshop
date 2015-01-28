@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAD2B1E71A793B050088EDE5 /* BeaconKitUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAD2B1E61A793B050088EDE5 /* BeaconKitUI.storyboard */; };
+		BAD2B1EA1A793DCC0088EDE5 /* BeaconCalibrationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BAD2B1E81A793DCC0088EDE5 /* BeaconCalibrationViewController.h */; };
+		BAD2B1EB1A793DCC0088EDE5 /* BeaconCalibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAD2B1E91A793DCC0088EDE5 /* BeaconCalibrationViewController.m */; };
 		BADAE8161A792FCD006505B7 /* BeaconKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BADAE8151A792FCD006505B7 /* BeaconKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BADAE81C1A792FCE006505B7 /* BeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADAE8101A792FCD006505B7 /* BeaconKit.framework */; };
 		BADAE8231A792FCE006505B7 /* BeaconKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAE8221A792FCE006505B7 /* BeaconKitTests.m */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BAD2B1E61A793B050088EDE5 /* BeaconKitUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BeaconKitUI.storyboard; sourceTree = "<group>"; };
+		BAD2B1E81A793DCC0088EDE5 /* BeaconCalibrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconCalibrationViewController.h; sourceTree = "<group>"; };
+		BAD2B1E91A793DCC0088EDE5 /* BeaconCalibrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconCalibrationViewController.m; sourceTree = "<group>"; };
 		BADAE8101A792FCD006505B7 /* BeaconKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BeaconKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADAE8141A792FCD006505B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADAE8151A792FCD006505B7 /* BeaconKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeaconKit.h; sourceTree = "<group>"; };
@@ -62,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAD2B1E51A793AE50088EDE5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BAD2B1E61A793B050088EDE5 /* BeaconKitUI.storyboard */,
+				BAD2B1E81A793DCC0088EDE5 /* BeaconCalibrationViewController.h */,
+				BAD2B1E91A793DCC0088EDE5 /* BeaconCalibrationViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		BADAE8061A792FCD006505B7 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +99,7 @@
 		BADAE8121A792FCD006505B7 /* BeaconKit */ = {
 			isa = PBXGroup;
 			children = (
+				BAD2B1E51A793AE50088EDE5 /* UI */,
 				BADAE8151A792FCD006505B7 /* BeaconKit.h */,
 				BADAE8301A79300F006505B7 /* Beacon.h */,
 				BADAE8311A79300F006505B7 /* Beacon.m */,
@@ -131,6 +148,7 @@
 				BADAE8361A79300F006505B7 /* Beacon.h in Headers */,
 				BADAE8161A792FCD006505B7 /* BeaconKit.h in Headers */,
 				BADAE8381A79300F006505B7 /* BeaconHandler.h in Headers */,
+				BAD2B1EA1A793DCC0088EDE5 /* BeaconCalibrationViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAD2B1E71A793B050088EDE5 /* BeaconKitUI.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADAE8391A79300F006505B7 /* BeaconHandler.m in Sources */,
+				BAD2B1EB1A793DCC0088EDE5 /* BeaconCalibrationViewController.m in Sources */,
 				BADAE83B1A79300F006505B7 /* BeaconRegion.m in Sources */,
 				BADAE8371A79300F006505B7 /* Beacon.m in Sources */,
 			);
