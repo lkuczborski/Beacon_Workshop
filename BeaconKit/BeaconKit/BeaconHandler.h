@@ -15,8 +15,6 @@
 
 @class BeaconHandler;
 
-extern NSString *const BeaconHandlerDidUpdateBeaconsNotification;
-
 @protocol BeaconEventHandler <NSObject>
 
 - (void)beaconHandler:(BeaconHandler *)handler

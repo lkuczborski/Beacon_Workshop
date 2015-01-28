@@ -9,8 +9,6 @@
 #import "BeaconHandler.h"
 #import "BeaconCalibrationViewController.h"
 
-NSString *const BeaconHandlerDidUpdateBeaconsNotification = @"BeaconHandlerDidUpdateBeaconsNotification";
-
 static NSUInteger RegionsLimit = 20;
 static NSString *const BUNDLE_ID     = @"com.allegrogroup.BeaconKit";
 static NSString *const STORYBOARD_ID = @"BeaconKitUI";
@@ -169,10 +167,6 @@ static NSString *const STORYBOARD_ID = @"BeaconKitUI";
 	
 	[self.delegate beaconHandler:self
 				didUpdateBeacons:[NSArray arrayWithArray:updatedBeacons]];
-	
-	[[NSNotificationCenter defaultCenter] postNotificationName:BeaconHandlerDidUpdateBeaconsNotification
-														object:self
-													  userInfo:@{@"UpdatedBeacons": [NSArray arrayWithArray:updatedBeacons]}];
 }
 
 #pragma mark - BeaconProvider
