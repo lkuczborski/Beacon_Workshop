@@ -7,13 +7,12 @@
 //
 
 #import "BeaconHandler.h"
-#import "BeaconCalibrationViewController.h"
 
 static NSUInteger RegionsLimit = 20;
 static NSString *const BUNDLE_ID     = @"com.allegrogroup.BeaconKit";
 static NSString *const STORYBOARD_ID = @"BeaconKitUI";
 
-@interface BeaconHandler () <CLLocationManagerDelegate, BeaconProvider>
+@interface BeaconHandler () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
@@ -60,23 +59,6 @@ static NSString *const STORYBOARD_ID = @"BeaconKitUI";
 		
 		[self registerRegions];
 	}
-}
-
-- (void)showCalibrationUIFromViewConfroller:(UIViewController *)fromViewController
-{
-	NSBundle *frameworkBundle = [NSBundle bundleWithIdentifier:BUNDLE_ID];
-	UIStoryboard *beaconKitStoryBoard = [UIStoryboard storyboardWithName:STORYBOARD_ID
-																  bundle:frameworkBundle];
-	
-	UIViewController *vcToPresent = [beaconKitStoryBoard instantiateInitialViewController];
-	NSAssert([vcToPresent isKindOfClass:[BeaconCalibrationViewController class]] == YES, @"That VC should be BeaconCalibrationViewController class");
-	
-	BeaconCalibrationViewController *beaconCalibrationVC = (BeaconCalibrationViewController *)vcToPresent;
-	beaconCalibrationVC.beaconHandler = self;
-	
-	[fromViewController presentViewController:beaconCalibrationVC
-									 animated:YES
-								   completion:nil];
 }
 
 #pragma mark - Private API

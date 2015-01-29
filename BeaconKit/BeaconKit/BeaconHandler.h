@@ -31,6 +31,4 @@
 
 - (void)start;
 
-- (void)showCalibrationUIFromViewConfroller:(UIViewController *)fromViewController;
-
 @end

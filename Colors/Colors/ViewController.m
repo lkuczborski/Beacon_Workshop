@@ -110,18 +110,4 @@ static NSString *const GREEN_UUID = @"3A7E7514-A9AC-41F3-A236-3CFCE75BAC95";
 	[self animateToColor:[UIColor colorWithRed:r green:g blue:b alpha:a]];
 }
 
-#pragma mark - Shake Gesture
-
-- (BOOL)canBecomeFirstResponder {
-    return YES;
-}
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
-{
-    if (motion == UIEventSubtypeMotionShake)
-    {
-        [self.handler showCalibrationUIFromViewConfroller:self];
-    } 
-}
-
 @end
