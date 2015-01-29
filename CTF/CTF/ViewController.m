@@ -34,6 +34,7 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
 
 @property (nonatomic, strong) NSDictionary *hueIDToName;
 @property (nonatomic, strong) NSDictionary *nameToHueID;
+@property (nonatomic, strong) NSDictionary *nameToHueUI;
 
 @property (nonatomic, strong) BeaconHandler *handler;
 
@@ -47,6 +48,7 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
     
     self.hueIDToName = @{HUE_1:HUE_1_NAME, HUE_2:HUE_2_NAME, HUE_3:HUE_3_NAME};
     self.nameToHueID = @{HUE_1_NAME:HUE_1, HUE_2_NAME:HUE_2, HUE_3_NAME:HUE_3};
+    self.nameToHueUI = @{HUE_1_NAME:self.hue1, HUE_2_NAME: self.hue2, HUE_3_NAME:self.hue3};
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -99,7 +101,34 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
 
 - (void)updateBulbsIndycators
 {
+    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
+    for (PHLight *lightBulb in cache.lights.allValues) {
+        UIColor *bulbColor = [self colorFromLightBulb:lightBulb];
+        
+        UIView *viewToUpdate = self.nameToHueUI[lightBulb.name];
+        
+        [UIView animateWithDuration:1
+                              delay:0
+                            options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             viewToUpdate.backgroundColor = bulbColor;
+                         }
+                         completion:nil];
+    }
+}
+
+- (UIColor *)colorFromLightBulb:(PHLight *)light
+{
+    if ([light.lightState.reachable isEqualToNumber:@(NO)]) {
+        return [UIColor blackColor];
+    }
     
+    CGFloat lightHue = [light.lightState.hue doubleValue] / MAX_HUE;
+    
+    return [UIColor colorWithHue:lightHue
+                      saturation:1
+                      brightness:1
+                           alpha:1];
 }
 
 #pragma mark - Hue Changes
@@ -112,7 +141,8 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
         return;
     }
     
-    [self updateLight:lightToChange withColor:self.currentTeam.backgroundColor];
+    [self updateLight:lightToChange
+            withColor:self.currentTeam.backgroundColor];
 }
 /*
  * ---------------------- ATTENTION ----------------------
@@ -214,9 +244,9 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
     
     NSString *beaconID = beacon.uuid;
     NSString *bulbName = self.hueIDToName[beaconID];
-
+    
     for (PHLight *lightBulb in cache.lights.allValues) {
-
+        
         if ([lightBulb.name isEqualToString:bulbName]) {
             return lightBulb;
         }
