@@ -14,13 +14,29 @@ static NSString *const STORYBOARD_ID = @"BeaconKitUI";
 
 @interface BeaconHandler () <CLLocationManagerDelegate>
 
+/**
+ *  CLLocationManager that is used to get information about CLBeacons in the outside world.
+ */
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
+/**
+ *  NSArray of Beacons instances that this BeaconHandler is handling.
+ */
 @property (nonatomic, strong) NSMutableArray *beacons;
+
+/**
+ *  NSArray of BeaconRegions that this BeaconHandler is handeling.
+ */
 @property (nonatomic, copy) NSArray *regions;
 
+/**
+ *  Dictionary used for fast lookups for Beacon instances based on their base data.
+ */
 @property (nonatomic, strong) NSMutableDictionary *handledBeacons;
 
+/**
+ *  Holds state if BeaconHandler is running or not.
+ */
 @property (nonatomic, assign, getter=isRunning) BOOL running;
 
 @end
