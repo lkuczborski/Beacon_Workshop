@@ -56,6 +56,8 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
     [super viewDidAppear:animated];
     
     [self setupBeaconHandler];
+    
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
 
 #pragma mark - Team Select Action
