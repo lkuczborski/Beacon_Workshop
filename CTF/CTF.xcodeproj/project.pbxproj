@@ -30,8 +30,8 @@
 		BA027A251A778B7100ED1424 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1B1A778B7100ED1424 /* DDTTYLogger.m */; };
 		BA027A261A778B7100ED1424 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */; };
 		BA027A271A778B7100ED1424 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */; };
-		BBFA8A2C1A7960DD0057FD65 /* BeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFA8A281A7960CC0057FD65 /* BeaconKit.framework */; };
-		BBFA8A2D1A7960DD0057FD65 /* BeaconKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBFA8A281A7960CC0057FD65 /* BeaconKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA2BAFD31A7A2E3100FB9BD5 /* BeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2BAFD21A7A2E3100FB9BD5 /* BeaconKit.framework */; };
+		BA2BAFD41A7A2E3100FB9BD5 /* BeaconKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA2BAFD21A7A2E3100FB9BD5 /* BeaconKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,13 +45,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BBFA8A2E1A7960DD0057FD65 /* Embed Frameworks */ = {
+		BA2BAFD51A7A2E3100FB9BD5 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BBFA8A2D1A7960DD0057FD65 /* BeaconKit.framework in Embed Frameworks */,
+				BA2BAFD41A7A2E3100FB9BD5 /* BeaconKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,7 +98,7 @@
 		BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		BA027A1F1A778B7100ED1424 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		BBFA8A281A7960CC0057FD65 /* BeaconKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = BeaconKit.framework; path = "/Users/developerios/Library/Developer/Xcode/DerivedData/Build/Products/Debug-iphoneos/BeaconKit.framework"; sourceTree = "<absolute>"; };
+		BA2BAFD21A7A2E3100FB9BD5 /* BeaconKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = BeaconKit.framework; path = "/Users/lukasz.stocki/Library/Developer/Xcode/DerivedData/HomeKit_Workshop-goxyvjzztlqtlqejflvayzyjliuo/Build/Products/Debug-iphoneos/BeaconKit.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA027A101A778B3D00ED1424 /* HueSDK_iOS.framework in Frameworks */,
-				BBFA8A2C1A7960DD0057FD65 /* BeaconKit.framework in Frameworks */,
+				BA2BAFD31A7A2E3100FB9BD5 /* BeaconKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +185,7 @@
 		8B6A7F091A777BF9001BB995 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BBFA8A281A7960CC0057FD65 /* BeaconKit.framework */,
+				BA2BAFD21A7A2E3100FB9BD5 /* BeaconKit.framework */,
 				BA027A111A778B7100ED1424 /* Lumberjack */,
 				BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */,
 			);
@@ -265,7 +265,7 @@
 				8B03B2EC1A6F9FFA003FF5CF /* Sources */,
 				8B03B2ED1A6F9FFA003FF5CF /* Frameworks */,
 				8B03B2EE1A6F9FFA003FF5CF /* Resources */,
-				BBFA8A2E1A7960DD0057FD65 /* Embed Frameworks */,
+				BA2BAFD51A7A2E3100FB9BD5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
