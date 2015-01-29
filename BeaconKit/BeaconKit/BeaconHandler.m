@@ -151,11 +151,4 @@ static NSString *const STORYBOARD_ID = @"BeaconKitUI";
 				didUpdateBeacons:[NSArray arrayWithArray:updatedBeacons]];
 }
 
-#pragma mark - BeaconProvider
-
-- (NSArray *)beaconsToCalibrate
-{
-	return [NSArray arrayWithArray:self.beaconsToCalibrate];
-}
-
 @end
