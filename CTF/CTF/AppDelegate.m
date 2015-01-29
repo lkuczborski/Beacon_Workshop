@@ -197,9 +197,8 @@
             [self.noConnectionAlert dismissWithClickedButtonIndex:[self.noConnectionAlert cancelButtonIndex] animated:YES];
             self.noConnectionAlert = nil;
         }
-        [self.controlLightsViewController pairBulbsWithBeacons];
+
         [self removeLoadingView];
-        
     }
 }
 
@@ -380,7 +379,6 @@
     
     // Remove pushlink view controller
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
-    [self.controlLightsViewController pairBulbsWithBeacons];
     self.pushLinkViewController = nil;
     
     // Start local heartbeat

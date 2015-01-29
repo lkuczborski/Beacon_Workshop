@@ -32,8 +32,6 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
 @property (weak, nonatomic) IBOutlet UIView *hue2;
 @property (weak, nonatomic) IBOutlet UIView *hue3;
 
-@property (nonatomic, strong) NSMutableDictionary *beaconToBulbPairing;
-
 @property (nonatomic, strong) NSDictionary *hueIDToName;
 @property (nonatomic, strong) NSDictionary *nameToHueID;
 
@@ -54,17 +52,8 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    _beaconToBulbPairing = [NSMutableDictionary dictionary];
     
     [self setupBeaconHandler];
-}
-
-- (void)pairBulbsWithBeacons {
-    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
-    
-    for (PHLight *light in cache.lights.allValues) {
-        [self.beaconToBulbPairing setObject:light.identifier forKey:HUE_1];
-    }
 }
 
 #pragma mark - Team Select Action
@@ -72,19 +61,6 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
 - (IBAction)switchTeam:(UIControl *)sender {
     
     self.currentTeam.backgroundColor = sender.backgroundColor;
-}
-
-#pragma mark - Hue Changes
-- (void)changeBulbHueWithBeacon:(Beacon *)beacon
-{
-    PHLight *lightToChange = [self lightForBeacon:beacon];
-    
-    if (lightToChange == nil) {
-        NSLog(@"%s\t No lihgt bulb to change :(", __PRETTY_FUNCTION__);
-        return;
-    }
-    
-    [self updateLight:lightToChange withColor:self.currentTeam.backgroundColor];
 }
 
 #pragma mark - BeaconHandler
@@ -115,9 +91,29 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
             [self changeBulbHueWithBeacon:beacon];
         }
     }
+    
+    [self updateBulbsIndycators];
 }
 
-#pragma mark - Helper Methods
+#pragma mark - UI
+
+- (void)updateBulbsIndycators
+{
+    
+}
+
+#pragma mark - Hue Changes
+- (void)changeBulbHueWithBeacon:(Beacon *)beacon
+{
+    PHLight *lightToChange = [self lightForBeacon:beacon];
+    
+    if (lightToChange == nil) {
+        NSLog(@"%s\t No lihgt bulb to change :(", __PRETTY_FUNCTION__);
+        return;
+    }
+    
+    [self updateLight:lightToChange withColor:self.currentTeam.backgroundColor];
+}
 /*
  * ---------------------- ATTENTION ----------------------
  *
