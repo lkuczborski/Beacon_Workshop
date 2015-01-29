@@ -72,114 +72,6 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
 - (IBAction)switchTeam:(UIControl *)sender {
     
     self.currentTeam.backgroundColor = sender.backgroundColor;
-    [self stepBulb:self.beaconToBulbPairing[HUE_1] toColor:sender.backgroundColor];
-    
-//    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
-//    PHBridgeSendAPI *bridgeSendAPI = [[PHBridgeSendAPI alloc] init];
-//    
-//    CGFloat hue, saturation;
-//    [sender.backgroundColor getHue:&hue saturation:&saturation brightness:nil alpha:nil];
-//    
-//    for (PHLight *light in cache.lights.allValues) {
-//        
-//        PHLightState *lightState = [[PHLightState alloc] init];
-//        
-//        
-//        [lightState setHue:@(hue * MAX_HUE)];
-//        [lightState setBrightness:[NSNumber numberWithInt:0]];
-//        [lightState setSaturation:@(saturation * 254)];
-//        
-//        // Send lightstate to light
-//        [bridgeSendAPI updateLightStateForId:light.identifier withLightState:lightState completionHandler:^(NSArray *errors) {
-//            if (errors != nil) {
-//                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
-//                
-//                NSLog(@"Response: %@",message);
-//            }
-//            
-//        }];
-//    }
-}
-
-/*
- * ---------------------- ATTENTION ----------------------
- *
- * Red color is both at 0 and HUE_MAX - thanks to this we can make smooth transitions between our colors.
- * Red(0) -> Green -> Blue -> Red(HUE_MAX)
- * Just have to figure out how :)
- *
- * ---------------------- ATTENTION ----------------------
- */
-
-- (void)stepBulb:(NSString*)light toColor:(UIColor*)color {
-    
-    PHBridgeResourcesCache *cache = [PHBridgeResourcesReader readBridgeResourcesCache];
-    
-    for (PHLight *lightBulb in cache.lights.allValues) {
-        PHLightState *currentColor = lightBulb.lightState;
-        NSInteger currentHue = [[currentColor hue] integerValue];
-        NSInteger currentSaturation = [[currentColor saturation] integerValue];
-        
-        CGFloat hue, saturation;
-        [color getHue:&hue saturation:&saturation brightness:nil alpha:nil];
-        
-        NSInteger targetHue = hue * MAX_HUE;
-        NSInteger targetSaturation = saturation * 254;
-        
-        NSInteger newHue = currentHue;
-        NSInteger newSaturation = 0;
-        
-        PHLightState *newLightState = [[PHLightState alloc] init];
-        
-        if (currentHue != targetHue) {
-            if (currentHue > targetHue) {
-                newHue = currentHue - HUE_STEP;
-                if (newHue < targetHue)
-                    newHue = targetHue;
-                if (newHue < 0)
-                    newHue = 0;
-            } else {
-                newHue = currentHue + HUE_STEP;
-                if (newHue > targetHue)
-                    newHue = targetHue;
-                if (newHue > MAX_HUE)
-                    newHue = MAX_HUE;
-            }
-        }
-        
-        if (currentSaturation != targetSaturation) {
-            if (currentSaturation > targetSaturation) {
-                newSaturation = currentSaturation - SATURATION_STEP;
-                if (newSaturation < targetSaturation)
-                    newSaturation = targetSaturation;
-                if (newSaturation < 0)
-                    newSaturation = 0;
-            } else {
-                newSaturation = currentSaturation + SATURATION_STEP;
-                if (newSaturation > targetSaturation)
-                    newSaturation = targetSaturation;
-                if (newSaturation > 254) //MAKE MAX_SATURATION
-                    newSaturation = 254;
-            }
-        }
-        
-        NSLog(@"sending to Light %@ : currentHue -> %i; targetHue -> %i; newHue -> %i;", lightBulb.identifier, currentHue, targetHue, newHue);
-        
-        [newLightState setHue:@(newHue)];
-        [newLightState setSaturation:@(254)];
-        [newLightState setBrightness:@(0)];
-        
-        PHBridgeSendAPI *sendApi = [[PHBridgeSendAPI alloc] init];
-        [sendApi updateLightStateForId:lightBulb.identifier withLightState:newLightState completionHandler:^(NSArray *errors) {
-            if (errors != nil) {
-                NSString *message = [NSString stringWithFormat:@"%@: %@", NSLocalizedString(@"Errors", @""), errors != nil ? errors : NSLocalizedString(@"none", @"")];
-                
-                NSLog(@"Response: %@",message);
-            }
-            
-        }];
-    }
-    
 }
 
 #pragma mark - Hue Changes
@@ -226,6 +118,15 @@ static NSString *const HUE_3_NAME = @"Hue Lamp 2";
 }
 
 #pragma mark - Helper Methods
+/*
+ * ---------------------- ATTENTION ----------------------
+ *
+ * Red color is both at 0 and HUE_MAX - thanks to this we can make smooth transitions between our colors.
+ * Red(0) -> Green -> Blue -> Red(HUE_MAX)
+ * Just have to figure out how :)
+ *
+ * ---------------------- ATTENTION ----------------------
+ */
 - (NSInteger)calculateNewHueStepFromLightState:(PHLightState *)lightState toColor:(UIColor *)newColor {
     PHLightState *currentColor = lightState;
     NSInteger currentHue = [[currentColor hue] integerValue];
