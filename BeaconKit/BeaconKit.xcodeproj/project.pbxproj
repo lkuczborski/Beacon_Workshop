@@ -184,6 +184,7 @@
 				TargetAttributes = {
 					BADAE80F1A792FCD006505B7 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = Q79FTA4VEX;
 					};
 					BADAE81A1A792FCE006505B7 = {
 						CreatedOnToolsVersion = 6.1;
@@ -342,6 +343,7 @@
 		BADAE8271A792FCE006505B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -358,6 +360,7 @@
 		BADAE8281A792FCE006505B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
