@@ -13,7 +13,7 @@
 		8B03B2FF1A6F9FFA003FF5CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2FD1A6F9FFA003FF5CF /* Main.storyboard */; };
 		8B03B3011A6F9FFA003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3001A6F9FFA003FF5CF /* Images.xcassets */; };
 		8B03B3041A6F9FFA003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3021A6F9FFA003FF5CF /* LaunchScreen.xib */; };
-		8B03B3101A6F9FFA003FF5CF /* CTFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */; };
+		8BD496311A7B6A930049B38C /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD496301A7B6A930049B38C /* libBeaconKit.a */; };
 		9EC5B1CA1A7798BB001934AD /* PHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */; };
 		9EC5B1CB1A7798BB001934AD /* PHLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */; };
 		9EC5B1CC1A7798BB001934AD /* PHBridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C21A7798BB001934AD /* PHBridgePushLinkViewController.m */; };
@@ -30,19 +30,7 @@
 		BA027A251A778B7100ED1424 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1B1A778B7100ED1424 /* DDTTYLogger.m */; };
 		BA027A261A778B7100ED1424 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */; };
 		BA027A271A778B7100ED1424 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */; };
-		BA2BAFD31A7A2E3100FB9BD5 /* BeaconKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2BAFD21A7A2E3100FB9BD5 /* BeaconKit.framework */; };
-		BA2BAFD41A7A2E3100FB9BD5 /* BeaconKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA2BAFD21A7A2E3100FB9BD5 /* BeaconKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8B03B30A1A6F9FFA003FF5CF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8B03B2E81A6F9FFA003FF5CF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B03B2EF1A6F9FFA003FF5CF;
-			remoteInfo = CTF;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BA2BAFD51A7A2E3100FB9BD5 /* Embed Frameworks */ = {
@@ -51,7 +39,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BA2BAFD41A7A2E3100FB9BD5 /* BeaconKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,9 +56,9 @@
 		8B03B2FE1A6F9FFA003FF5CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B03B3001A6F9FFA003FF5CF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8B03B3031A6F9FFA003FF5CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8B03B3091A6F9FFA003FF5CF /* CTFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CTFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B03B30E1A6F9FFA003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFTests.m; sourceTree = "<group>"; };
+		8BD496301A7B6A930049B38C /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../../../Library/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 		9EC5B1BE1A7798BB001934AD /* PHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoadingViewController.h; sourceTree = "<group>"; };
 		9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoadingViewController.m; sourceTree = "<group>"; };
 		9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLoadingViewController.xib; sourceTree = "<group>"; };
@@ -98,7 +85,6 @@
 		BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		BA027A1F1A778B7100ED1424 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		BA2BAFD21A7A2E3100FB9BD5 /* BeaconKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = BeaconKit.framework; path = "/Users/lukasz.stocki/Library/Developer/Xcode/DerivedData/HomeKit_Workshop-goxyvjzztlqtlqejflvayzyjliuo/Build/Products/Debug-iphoneos/BeaconKit.framework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,15 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD496311A7B6A930049B38C /* libBeaconKit.a in Frameworks */,
 				BA027A101A778B3D00ED1424 /* HueSDK_iOS.framework in Frameworks */,
-				BA2BAFD31A7A2E3100FB9BD5 /* BeaconKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B03B3061A6F9FFA003FF5CF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				8B03B2F01A6F9FFA003FF5CF /* CTF.app */,
-				8B03B3091A6F9FFA003FF5CF /* CTFTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,7 +163,7 @@
 		8B6A7F091A777BF9001BB995 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BA2BAFD21A7A2E3100FB9BD5 /* BeaconKit.framework */,
+				8BD496301A7B6A930049B38C /* libBeaconKit.a */,
 				BA027A111A778B7100ED1424 /* Lumberjack */,
 				BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */,
 			);
@@ -276,24 +254,6 @@
 			productReference = 8B03B2F01A6F9FFA003FF5CF /* CTF.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8B03B3081A6F9FFA003FF5CF /* CTFTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8B03B3161A6F9FFA003FF5CF /* Build configuration list for PBXNativeTarget "CTFTests" */;
-			buildPhases = (
-				8B03B3051A6F9FFA003FF5CF /* Sources */,
-				8B03B3061A6F9FFA003FF5CF /* Frameworks */,
-				8B03B3071A6F9FFA003FF5CF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8B03B30B1A6F9FFA003FF5CF /* PBXTargetDependency */,
-			);
-			name = CTFTests;
-			productName = CTFTests;
-			productReference = 8B03B3091A6F9FFA003FF5CF /* CTFTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -305,11 +265,6 @@
 				TargetAttributes = {
 					8B03B2EF1A6F9FFA003FF5CF = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = Q79FTA4VEX;
-					};
-					8B03B3081A6F9FFA003FF5CF = {
-						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 8B03B2EF1A6F9FFA003FF5CF;
 					};
 				};
 			};
@@ -327,7 +282,6 @@
 			projectRoot = "";
 			targets = (
 				8B03B2EF1A6F9FFA003FF5CF /* CTF */,
-				8B03B3081A6F9FFA003FF5CF /* CTFTests */,
 			);
 		};
 /* End PBXProject section */
@@ -345,13 +299,6 @@
 				9EC5B1D11A7798BB001934AD /* press_smartbridge@2x.png in Resources */,
 				8B03B3041A6F9FFA003FF5CF /* LaunchScreen.xib in Resources */,
 				8B03B3011A6F9FFA003FF5CF /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8B03B3071A6F9FFA003FF5CF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,23 +325,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B03B3051A6F9FFA003FF5CF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8B03B3101A6F9FFA003FF5CF /* CTFTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8B03B30B1A6F9FFA003FF5CF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8B03B2EF1A6F9FFA003FF5CF /* CTF */;
-			targetProxy = 8B03B30A1A6F9FFA003FF5CF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8B03B2FD1A6F9FFA003FF5CF /* Main.storyboard */ = {
@@ -433,6 +364,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -474,6 +406,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -509,6 +442,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -533,44 +467,11 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		8B03B3171A6F9FFA003FF5CF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CTFTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CTF.app/CTF";
-			};
-			name = Debug;
-		};
-		8B03B3181A6F9FFA003FF5CF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = CTFTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CTF.app/CTF";
 			};
 			name = Release;
 		};
@@ -591,15 +492,6 @@
 			buildConfigurations = (
 				8B03B3141A6F9FFA003FF5CF /* Debug */,
 				8B03B3151A6F9FFA003FF5CF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8B03B3161A6F9FFA003FF5CF /* Build configuration list for PBXNativeTarget "CTFTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8B03B3171A6F9FFA003FF5CF /* Debug */,
-				8B03B3181A6F9FFA003FF5CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
