@@ -14,7 +14,6 @@
 		8B03B2941A6F9FBE003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2931A6F9FBE003FF5CF /* Images.xcassets */; };
 		8B03B2971A6F9FBE003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2951A6F9FBE003FF5CF /* LaunchScreen.xib */; };
 		8BD4962F1A7B6A780049B38C /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD4962E1A7B6A780049B38C /* libBeaconKit.a */; };
-		8BEBAF931A7B757100D39EAB /* ColorsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEBAF921A7B757100D39EAB /* ColorsTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +54,6 @@
 		8B03B2A21A6F9FBE003FF5CF /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
 		8BD4962E1A7B6A780049B38C /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../../../Library/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 		8BEBAF8E1A7B757100D39EAB /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BEBAF911A7B757100D39EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BEBAF921A7B757100D39EAB /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +80,6 @@
 			children = (
 				8B03B2851A6F9FBE003FF5CF /* Colors */,
 				8B03B29F1A6F9FBE003FF5CF /* ColorsTests */,
-				8BEBAF8F1A7B757100D39EAB /* ColorsTests */,
 				8B03B2841A6F9FBE003FF5CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -145,23 +141,6 @@
 				8BD4962E1A7B6A780049B38C /* libBeaconKit.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8BEBAF8F1A7B757100D39EAB /* ColorsTests */ = {
-			isa = PBXGroup;
-			children = (
-				8BEBAF921A7B757100D39EAB /* ColorsTests.m */,
-				8BEBAF901A7B757100D39EAB /* Supporting Files */,
-			);
-			path = ColorsTests;
-			sourceTree = "<group>";
-		};
-		8BEBAF901A7B757100D39EAB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8BEBAF911A7B757100D39EAB /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BEBAF931A7B757100D39EAB /* ColorsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

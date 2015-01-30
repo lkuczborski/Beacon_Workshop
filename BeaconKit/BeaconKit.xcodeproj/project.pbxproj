@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BD4961A1A7B6A460049B38C /* BeaconKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BD496191A7B6A460049B38C /* BeaconKit.h */; };
-		8BD4961C1A7B6A460049B38C /* BeaconKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD4961B1A7B6A460049B38C /* BeaconKit.m */; };
 		8BD496321A7B6B3B0049B38C /* BeaconHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAE8331A79300F006505B7 /* BeaconHandler.m */; };
 		8BD496331A7B6B3D0049B38C /* BeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAE8351A79300F006505B7 /* BeaconRegion.m */; };
 		8BD496341A7B6B410049B38C /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAE8311A79300F006505B7 /* Beacon.m */; };
-		8BEBAF831A7B755E00D39EAB /* BeaconKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEBAF821A7B755E00D39EAB /* BeaconKitTests.m */; };
 		8BEBAF841A7B755E00D39EAB /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD496171A7B6A460049B38C /* libBeaconKit.a */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +30,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				8BD4961A1A7B6A460049B38C /* BeaconKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,12 +37,7 @@
 
 /* Begin PBXFileReference section */
 		8BD496171A7B6A460049B38C /* libBeaconKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBeaconKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BD496191A7B6A460049B38C /* BeaconKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeaconKit.h; sourceTree = "<group>"; };
-		8BD4961B1A7B6A460049B38C /* BeaconKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconKit.m; sourceTree = "<group>"; };
-		8BD496271A7B6A460049B38C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BEBAF7E1A7B755E00D39EAB /* BeaconKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BEBAF811A7B755E00D39EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BEBAF821A7B755E00D39EAB /* BeaconKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeaconKitTests.m; sourceTree = "<group>"; };
 		BADAE8141A792FCD006505B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADAE8151A792FCD006505B7 /* BeaconKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeaconKit.h; sourceTree = "<group>"; };
 		BADAE8211A792FCE006505B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,56 +69,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8BD496181A7B6A460049B38C /* BeaconKit */ = {
-			isa = PBXGroup;
-			children = (
-				8BD496191A7B6A460049B38C /* BeaconKit.h */,
-				8BD4961B1A7B6A460049B38C /* BeaconKit.m */,
-			);
-			path = BeaconKit;
-			sourceTree = "<group>";
-		};
-		8BD496251A7B6A460049B38C /* BeaconKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				8BD496261A7B6A460049B38C /* Supporting Files */,
-			);
-			path = BeaconKitTests;
-			sourceTree = "<group>";
-		};
-		8BD496261A7B6A460049B38C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8BD496271A7B6A460049B38C /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8BEBAF7F1A7B755E00D39EAB /* BeaconKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				8BEBAF821A7B755E00D39EAB /* BeaconKitTests.m */,
-				8BEBAF801A7B755E00D39EAB /* Supporting Files */,
-			);
-			path = BeaconKitTests;
-			sourceTree = "<group>";
-		};
-		8BEBAF801A7B755E00D39EAB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8BEBAF811A7B755E00D39EAB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		BADAE8061A792FCD006505B7 = {
 			isa = PBXGroup;
 			children = (
 				BADAE8121A792FCD006505B7 /* BeaconKit */,
 				BADAE81F1A792FCE006505B7 /* BeaconKitTests */,
-				8BD496181A7B6A460049B38C /* BeaconKit */,
-				8BD496251A7B6A460049B38C /* BeaconKitTests */,
-				8BEBAF7F1A7B755E00D39EAB /* BeaconKitTests */,
 				BADAE8111A792FCD006505B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -271,7 +217,6 @@
 			files = (
 				8BD496321A7B6B3B0049B38C /* BeaconHandler.m in Sources */,
 				8BD496331A7B6B3D0049B38C /* BeaconRegion.m in Sources */,
-				8BD4961C1A7B6A460049B38C /* BeaconKit.m in Sources */,
 				8BD496341A7B6B410049B38C /* Beacon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BEBAF831A7B755E00D39EAB /* BeaconKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

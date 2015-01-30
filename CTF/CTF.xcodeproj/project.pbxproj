@@ -14,7 +14,6 @@
 		8B03B3011A6F9FFA003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3001A6F9FFA003FF5CF /* Images.xcassets */; };
 		8B03B3041A6F9FFA003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3021A6F9FFA003FF5CF /* LaunchScreen.xib */; };
 		8BD496311A7B6A930049B38C /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD496301A7B6A930049B38C /* libBeaconKit.a */; };
-		8BEBAFA21A7B757E00D39EAB /* CTFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEBAFA11A7B757E00D39EAB /* CTFTests.m */; };
 		9EC5B1CA1A7798BB001934AD /* PHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */; };
 		9EC5B1CB1A7798BB001934AD /* PHLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */; };
 		9EC5B1CC1A7798BB001934AD /* PHBridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C21A7798BB001934AD /* PHBridgePushLinkViewController.m */; };
@@ -71,8 +70,6 @@
 		8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFTests.m; sourceTree = "<group>"; };
 		8BD496301A7B6A930049B38C /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../../../Library/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 		8BEBAF9D1A7B757E00D39EAB /* CTFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CTFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BEBAFA01A7B757E00D39EAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BEBAFA11A7B757E00D39EAB /* CTFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFTests.m; sourceTree = "<group>"; };
 		9EC5B1BE1A7798BB001934AD /* PHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoadingViewController.h; sourceTree = "<group>"; };
 		9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoadingViewController.m; sourceTree = "<group>"; };
 		9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PHLoadingViewController.xib; sourceTree = "<group>"; };
@@ -126,7 +123,6 @@
 			children = (
 				8B03B2F21A6F9FFA003FF5CF /* CTF */,
 				8B03B30C1A6F9FFA003FF5CF /* CTFTests */,
-				8BEBAF9E1A7B757E00D39EAB /* CTFTests */,
 				8B03B2F11A6F9FFA003FF5CF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -191,23 +187,6 @@
 				BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8BEBAF9E1A7B757E00D39EAB /* CTFTests */ = {
-			isa = PBXGroup;
-			children = (
-				8BEBAFA11A7B757E00D39EAB /* CTFTests.m */,
-				8BEBAF9F1A7B757E00D39EAB /* Supporting Files */,
-			);
-			path = CTFTests;
-			sourceTree = "<group>";
-		};
-		8BEBAF9F1A7B757E00D39EAB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8BEBAFA01A7B757E00D39EAB /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		9EC5B1BC1A7798BB001934AD /* SDKWizard */ = {
@@ -399,7 +378,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BEBAFA21A7B757E00D39EAB /* CTFTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
