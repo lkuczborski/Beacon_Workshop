@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Pong/Pong.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:BeaconKit/BeaconKit.xcodeproj">
    </FileRef>
    <FileRef

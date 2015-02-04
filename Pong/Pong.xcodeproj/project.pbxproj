@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B7F35BA1A8287DC00CF2AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F35B91A8287DC00CF2AC0 /* main.m */; };
+		8B7F35BD1A8287DC00CF2AC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F35BC1A8287DC00CF2AC0 /* AppDelegate.m */; };
+		8B7F35C01A8287DC00CF2AC0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F35BF1A8287DC00CF2AC0 /* ViewController.m */; };
+		8B7F35C31A8287DC00CF2AC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F35C11A8287DC00CF2AC0 /* Main.storyboard */; };
+		8B7F35C51A8287DC00CF2AC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F35C41A8287DC00CF2AC0 /* Images.xcassets */; };
+		8B7F35C81A8287DC00CF2AC0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7F35C61A8287DC00CF2AC0 /* LaunchScreen.xib */; };
+		8B7F35D41A8287DD00CF2AC0 /* PongTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F35D31A8287DD00CF2AC0 /* PongTests.m */; };
+		8B7F36311A8289E100CF2AC0 /* libkontakt-ios-sdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B7F36301A8289E100CF2AC0 /* libkontakt-ios-sdk.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B7F35CE1A8287DD00CF2AC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B7F35AC1A8287DC00CF2AC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B7F35B31A8287DC00CF2AC0;
+			remoteInfo = Pong;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B7F35B41A8287DC00CF2AC0 /* Pong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pong.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B7F35B81A8287DC00CF2AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7F35B91A8287DC00CF2AC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8B7F35BB1A8287DC00CF2AC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8B7F35BC1A8287DC00CF2AC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B7F35BE1A8287DC00CF2AC0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8B7F35BF1A8287DC00CF2AC0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8B7F35C21A8287DC00CF2AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B7F35C41A8287DC00CF2AC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8B7F35C71A8287DC00CF2AC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8B7F35CD1A8287DD00CF2AC0 /* PongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B7F35D21A8287DD00CF2AC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B7F35D31A8287DD00CF2AC0 /* PongTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PongTests.m; sourceTree = "<group>"; };
+		8B7F360E1A8289E100CF2AC0 /* KontaktSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KontaktSDK.h; sourceTree = "<group>"; };
+		8B7F360F1A8289E100CF2AC0 /* KTKAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKAction.h; sourceTree = "<group>"; };
+		8B7F36101A8289E100CF2AC0 /* KTKActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKActionManager.h; sourceTree = "<group>"; };
+		8B7F36111A8289E100CF2AC0 /* KTKBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeacon.h; sourceTree = "<group>"; };
+		8B7F36121A8289E100CF2AC0 /* KTKBeaconDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconDevice.h; sourceTree = "<group>"; };
+		8B7F36131A8289E100CF2AC0 /* KTKBeaconDeviceV2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconDeviceV2.h; sourceTree = "<group>"; };
+		8B7F36141A8289E100CF2AC0 /* KTKBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconManager.h; sourceTree = "<group>"; };
+		8B7F36151A8289E100CF2AC0 /* KTKBeaconProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBeaconProfile.h; sourceTree = "<group>"; };
+		8B7F36161A8289E100CF2AC0 /* KTKBluetoothDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBluetoothDevice.h; sourceTree = "<group>"; };
+		8B7F36171A8289E100CF2AC0 /* KTKBluetoothManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKBluetoothManager.h; sourceTree = "<group>"; };
+		8B7F36181A8289E100CF2AC0 /* KTKCharacteristicDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKCharacteristicDescriptor.h; sourceTree = "<group>"; };
+		8B7F36191A8289E100CF2AC0 /* KTKClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKClient.h; sourceTree = "<group>"; };
+		8B7F361A1A8289E100CF2AC0 /* KTKCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKCompany.h; sourceTree = "<group>"; };
+		8B7F361B1A8289E100CF2AC0 /* KTKConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKConverter.h; sourceTree = "<group>"; };
+		8B7F361C1A8289E100CF2AC0 /* KTKDataTransferObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKDataTransferObject.h; sourceTree = "<group>"; };
+		8B7F361D1A8289E100CF2AC0 /* KTKDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKDescriptor.h; sourceTree = "<group>"; };
+		8B7F361E1A8289E100CF2AC0 /* KTKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKError.h; sourceTree = "<group>"; };
+		8B7F361F1A8289E100CF2AC0 /* KTKFirmware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKFirmware.h; sourceTree = "<group>"; };
+		8B7F36201A8289E100CF2AC0 /* KTKHexConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKHexConverter.h; sourceTree = "<group>"; };
+		8B7F36211A8289E100CF2AC0 /* KTKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKLocationManager.h; sourceTree = "<group>"; };
+		8B7F36221A8289E100CF2AC0 /* KTKManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKManager.h; sourceTree = "<group>"; };
+		8B7F36231A8289E100CF2AC0 /* KTKNumberConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKNumberConverter.h; sourceTree = "<group>"; };
+		8B7F36241A8289E100CF2AC0 /* KTKNumberDiscreteConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKNumberDiscreteConverter.h; sourceTree = "<group>"; };
+		8B7F36251A8289E100CF2AC0 /* KTKNumberLinearConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKNumberLinearConverter.h; sourceTree = "<group>"; };
+		8B7F36261A8289E100CF2AC0 /* KTKPublicBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPublicBeacon.h; sourceTree = "<group>"; };
+		8B7F36271A8289E100CF2AC0 /* KTKPublicVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKPublicVenue.h; sourceTree = "<group>"; };
+		8B7F36281A8289E100CF2AC0 /* KTKRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKRegion.h; sourceTree = "<group>"; };
+		8B7F36291A8289E100CF2AC0 /* KTKServiceDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKServiceDescriptor.h; sourceTree = "<group>"; };
+		8B7F362A1A8289E100CF2AC0 /* KTKStringConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKStringConverter.h; sourceTree = "<group>"; };
+		8B7F362B1A8289E100CF2AC0 /* KTKSubordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKSubordinate.h; sourceTree = "<group>"; };
+		8B7F362C1A8289E100CF2AC0 /* KTKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKUser.h; sourceTree = "<group>"; };
+		8B7F362D1A8289E100CF2AC0 /* KTKUUIDConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKUUIDConverter.h; sourceTree = "<group>"; };
+		8B7F362E1A8289E100CF2AC0 /* KTKVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKVenue.h; sourceTree = "<group>"; };
+		8B7F362F1A8289E100CF2AC0 /* KTKVenueBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTKVenueBase.h; sourceTree = "<group>"; };
+		8B7F36301A8289E100CF2AC0 /* libkontakt-ios-sdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libkontakt-ios-sdk.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B7F35B11A8287DC00CF2AC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B7F36311A8289E100CF2AC0 /* libkontakt-ios-sdk.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B7F35CA1A8287DD00CF2AC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B7F35AB1A8287DC00CF2AC0 = {
+			isa = PBXGroup;
+			children = (
+				8B7F35B61A8287DC00CF2AC0 /* Pong */,
+				8B7F35D01A8287DD00CF2AC0 /* PongTests */,
+				8B7F35B51A8287DC00CF2AC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B7F35B51A8287DC00CF2AC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F35B41A8287DC00CF2AC0 /* Pong.app */,
+				8B7F35CD1A8287DD00CF2AC0 /* PongTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B7F35B61A8287DC00CF2AC0 /* Pong */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F360B1A8289E100CF2AC0 /* kontakt */,
+				8B7F35BB1A8287DC00CF2AC0 /* AppDelegate.h */,
+				8B7F35BC1A8287DC00CF2AC0 /* AppDelegate.m */,
+				8B7F35BE1A8287DC00CF2AC0 /* ViewController.h */,
+				8B7F35BF1A8287DC00CF2AC0 /* ViewController.m */,
+				8B7F35C11A8287DC00CF2AC0 /* Main.storyboard */,
+				8B7F35C41A8287DC00CF2AC0 /* Images.xcassets */,
+				8B7F35C61A8287DC00CF2AC0 /* LaunchScreen.xib */,
+				8B7F35B71A8287DC00CF2AC0 /* Supporting Files */,
+			);
+			path = Pong;
+			sourceTree = "<group>";
+		};
+		8B7F35B71A8287DC00CF2AC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F35B81A8287DC00CF2AC0 /* Info.plist */,
+				8B7F35B91A8287DC00CF2AC0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B7F35D01A8287DD00CF2AC0 /* PongTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F35D31A8287DD00CF2AC0 /* PongTests.m */,
+				8B7F35D11A8287DD00CF2AC0 /* Supporting Files */,
+			);
+			path = PongTests;
+			sourceTree = "<group>";
+		};
+		8B7F35D11A8287DD00CF2AC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F35D21A8287DD00CF2AC0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8B7F360B1A8289E100CF2AC0 /* kontakt */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F360C1A8289E100CF2AC0 /* include */,
+				8B7F36301A8289E100CF2AC0 /* libkontakt-ios-sdk.a */,
+			);
+			path = kontakt;
+			sourceTree = "<group>";
+		};
+		8B7F360C1A8289E100CF2AC0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F360D1A8289E100CF2AC0 /* kontakt-ios-sdk */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		8B7F360D1A8289E100CF2AC0 /* kontakt-ios-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				8B7F360E1A8289E100CF2AC0 /* KontaktSDK.h */,
+				8B7F360F1A8289E100CF2AC0 /* KTKAction.h */,
+				8B7F36101A8289E100CF2AC0 /* KTKActionManager.h */,
+				8B7F36111A8289E100CF2AC0 /* KTKBeacon.h */,
+				8B7F36121A8289E100CF2AC0 /* KTKBeaconDevice.h */,
+				8B7F36131A8289E100CF2AC0 /* KTKBeaconDeviceV2.h */,
+				8B7F36141A8289E100CF2AC0 /* KTKBeaconManager.h */,
+				8B7F36151A8289E100CF2AC0 /* KTKBeaconProfile.h */,
+				8B7F36161A8289E100CF2AC0 /* KTKBluetoothDevice.h */,
+				8B7F36171A8289E100CF2AC0 /* KTKBluetoothManager.h */,
+				8B7F36181A8289E100CF2AC0 /* KTKCharacteristicDescriptor.h */,
+				8B7F36191A8289E100CF2AC0 /* KTKClient.h */,
+				8B7F361A1A8289E100CF2AC0 /* KTKCompany.h */,
+				8B7F361B1A8289E100CF2AC0 /* KTKConverter.h */,
+				8B7F361C1A8289E100CF2AC0 /* KTKDataTransferObject.h */,
+				8B7F361D1A8289E100CF2AC0 /* KTKDescriptor.h */,
+				8B7F361E1A8289E100CF2AC0 /* KTKError.h */,
+				8B7F361F1A8289E100CF2AC0 /* KTKFirmware.h */,
+				8B7F36201A8289E100CF2AC0 /* KTKHexConverter.h */,
+				8B7F36211A8289E100CF2AC0 /* KTKLocationManager.h */,
+				8B7F36221A8289E100CF2AC0 /* KTKManager.h */,
+				8B7F36231A8289E100CF2AC0 /* KTKNumberConverter.h */,
+				8B7F36241A8289E100CF2AC0 /* KTKNumberDiscreteConverter.h */,
+				8B7F36251A8289E100CF2AC0 /* KTKNumberLinearConverter.h */,
+				8B7F36261A8289E100CF2AC0 /* KTKPublicBeacon.h */,
+				8B7F36271A8289E100CF2AC0 /* KTKPublicVenue.h */,
+				8B7F36281A8289E100CF2AC0 /* KTKRegion.h */,
+				8B7F36291A8289E100CF2AC0 /* KTKServiceDescriptor.h */,
+				8B7F362A1A8289E100CF2AC0 /* KTKStringConverter.h */,
+				8B7F362B1A8289E100CF2AC0 /* KTKSubordinate.h */,
+				8B7F362C1A8289E100CF2AC0 /* KTKUser.h */,
+				8B7F362D1A8289E100CF2AC0 /* KTKUUIDConverter.h */,
+				8B7F362E1A8289E100CF2AC0 /* KTKVenue.h */,
+				8B7F362F1A8289E100CF2AC0 /* KTKVenueBase.h */,
+			);
+			path = "kontakt-ios-sdk";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B7F35B31A8287DC00CF2AC0 /* Pong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B7F35D71A8287DD00CF2AC0 /* Build configuration list for PBXNativeTarget "Pong" */;
+			buildPhases = (
+				8B7F35B01A8287DC00CF2AC0 /* Sources */,
+				8B7F35B11A8287DC00CF2AC0 /* Frameworks */,
+				8B7F35B21A8287DC00CF2AC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pong;
+			productName = Pong;
+			productReference = 8B7F35B41A8287DC00CF2AC0 /* Pong.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B7F35CC1A8287DD00CF2AC0 /* PongTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B7F35DA1A8287DD00CF2AC0 /* Build configuration list for PBXNativeTarget "PongTests" */;
+			buildPhases = (
+				8B7F35C91A8287DD00CF2AC0 /* Sources */,
+				8B7F35CA1A8287DD00CF2AC0 /* Frameworks */,
+				8B7F35CB1A8287DD00CF2AC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B7F35CF1A8287DD00CF2AC0 /* PBXTargetDependency */,
+			);
+			name = PongTests;
+			productName = PongTests;
+			productReference = 8B7F35CD1A8287DD00CF2AC0 /* PongTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B7F35AC1A8287DC00CF2AC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = ACME;
+				TargetAttributes = {
+					8B7F35B31A8287DC00CF2AC0 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					8B7F35CC1A8287DD00CF2AC0 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 8B7F35B31A8287DC00CF2AC0;
+					};
+				};
+			};
+			buildConfigurationList = 8B7F35AF1A8287DC00CF2AC0 /* Build configuration list for PBXProject "Pong" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B7F35AB1A8287DC00CF2AC0;
+			productRefGroup = 8B7F35B51A8287DC00CF2AC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B7F35B31A8287DC00CF2AC0 /* Pong */,
+				8B7F35CC1A8287DD00CF2AC0 /* PongTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B7F35B21A8287DC00CF2AC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B7F35C31A8287DC00CF2AC0 /* Main.storyboard in Resources */,
+				8B7F35C81A8287DC00CF2AC0 /* LaunchScreen.xib in Resources */,
+				8B7F35C51A8287DC00CF2AC0 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B7F35CB1A8287DD00CF2AC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B7F35B01A8287DC00CF2AC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B7F35C01A8287DC00CF2AC0 /* ViewController.m in Sources */,
+				8B7F35BD1A8287DC00CF2AC0 /* AppDelegate.m in Sources */,
+				8B7F35BA1A8287DC00CF2AC0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B7F35C91A8287DD00CF2AC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B7F35D41A8287DD00CF2AC0 /* PongTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B7F35CF1A8287DD00CF2AC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B7F35B31A8287DC00CF2AC0 /* Pong */;
+			targetProxy = 8B7F35CE1A8287DD00CF2AC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B7F35C11A8287DC00CF2AC0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B7F35C21A8287DC00CF2AC0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B7F35C61A8287DC00CF2AC0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B7F35C71A8287DC00CF2AC0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B7F35D51A8287DD00CF2AC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8B7F35D61A8287DD00CF2AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B7F35D81A8287DD00CF2AC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Pong/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pong",
+					"$(PROJECT_DIR)/Pong/kontakt",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8B7F35D91A8287DD00CF2AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Pong/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pong",
+					"$(PROJECT_DIR)/Pong/kontakt",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8B7F35DB1A8287DD00CF2AC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PongTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pong.app/Pong";
+			};
+			name = Debug;
+		};
+		8B7F35DC1A8287DD00CF2AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PongTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pong.app/Pong";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B7F35AF1A8287DC00CF2AC0 /* Build configuration list for PBXProject "Pong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B7F35D51A8287DD00CF2AC0 /* Debug */,
+				8B7F35D61A8287DD00CF2AC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B7F35D71A8287DD00CF2AC0 /* Build configuration list for PBXNativeTarget "Pong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B7F35D81A8287DD00CF2AC0 /* Debug */,
+				8B7F35D91A8287DD00CF2AC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8B7F35DA1A8287DD00CF2AC0 /* Build configuration list for PBXNativeTarget "PongTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B7F35DB1A8287DD00CF2AC0 /* Debug */,
+				8B7F35DC1A8287DD00CF2AC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B7F35AC1A8287DC00CF2AC0 /* Project object */;
+}
