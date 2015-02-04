@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-
 #import <BeaconKit/BeaconKit.h>
 #import <HueSDK_iOS/HueSDK.h>
 
