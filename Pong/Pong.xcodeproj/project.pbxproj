@@ -520,6 +520,7 @@
 				8B7F35D91A8287DD00CF2AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B7F35DA1A8287DD00CF2AC0 /* Build configuration list for PBXNativeTarget "PongTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +529,7 @@
 				8B7F35DC1A8287DD00CF2AC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
