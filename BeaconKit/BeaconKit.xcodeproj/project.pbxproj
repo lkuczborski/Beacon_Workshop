@@ -11,6 +11,10 @@
 		8BD496331A7B6B3D0049B38C /* BeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAE8351A79300F006505B7 /* BeaconRegion.m */; };
 		8BD496341A7B6B410049B38C /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = BADAE8311A79300F006505B7 /* Beacon.m */; };
 		8BEBAF841A7B755E00D39EAB /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD496171A7B6A460049B38C /* libBeaconKit.a */; };
+		BAFF24371A81FEED0083F2B6 /* BeaconKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BADAE8151A792FCD006505B7 /* BeaconKit.h */; };
+		BAFF24381A81FEED0083F2B6 /* Beacon.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BADAE8301A79300F006505B7 /* Beacon.h */; };
+		BAFF24391A81FEED0083F2B6 /* BeaconHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BADAE8321A79300F006505B7 /* BeaconHandler.h */; };
+		BAFF243A1A81FEED0083F2B6 /* BeaconRegion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BADAE8341A79300F006505B7 /* BeaconRegion.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +34,10 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				BAFF24371A81FEED0083F2B6 /* BeaconKit.h in CopyFiles */,
+				BAFF24381A81FEED0083F2B6 /* Beacon.h in CopyFiles */,
+				BAFF24391A81FEED0083F2B6 /* BeaconHandler.h in CopyFiles */,
+				BAFF243A1A81FEED0083F2B6 /* BeaconRegion.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +402,7 @@
 				8BEBAF881A7B755E00D39EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BADAE80A1A792FCD006505B7 /* Build configuration list for PBXProject "BeaconKit" */ = {
 			isa = XCConfigurationList;
