@@ -13,7 +13,7 @@
 		8B03B2921A6F9FBE003FF5CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2901A6F9FBE003FF5CF /* Main.storyboard */; };
 		8B03B2941A6F9FBE003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2931A6F9FBE003FF5CF /* Images.xcassets */; };
 		8B03B2971A6F9FBE003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2951A6F9FBE003FF5CF /* LaunchScreen.xib */; };
-		8BD4962F1A7B6A780049B38C /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD4962E1A7B6A780049B38C /* libBeaconKit.a */; };
+		BAAC894C1A8205CE00C4DD7E /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAC894B1A8205CE00C4DD7E /* libBeaconKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		8B03B2961A6F9FBE003FF5CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8B03B2A11A6F9FBE003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B2A21A6F9FBE003FF5CF /* ColorsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorsTests.m; sourceTree = "<group>"; };
-		8BD4962E1A7B6A780049B38C /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../../../Library/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 		8BEBAF8E1A7B757100D39EAB /* ColorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAAC894B1A8205CE00C4DD7E /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../../Library/Developer/Xcode/DerivedData/Beacon_Workshop-acrlykmfqoglxpcqfqqxknpkyjes/Build/Products/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD4962F1A7B6A780049B38C /* libBeaconKit.a in Frameworks */,
+				BAAC894C1A8205CE00C4DD7E /* libBeaconKit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +138,7 @@
 		8B6A7F0A1A777C0C001BB995 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8BD4962E1A7B6A780049B38C /* libBeaconKit.a */,
+				BAAC894B1A8205CE00C4DD7E /* libBeaconKit.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -381,6 +381,7 @@
 					"$(inherited)",
 					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Beacon_Workshop-acrlykmfqoglxpcqfqqxknpkyjes/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -403,6 +404,7 @@
 					"$(inherited)",
 					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Beacon_Workshop-acrlykmfqoglxpcqfqqxknpkyjes/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -471,6 +473,7 @@
 				8BEBAF971A7B757100D39EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

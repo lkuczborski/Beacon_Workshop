@@ -13,7 +13,6 @@
 		8B03B2FF1A6F9FFA003FF5CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B2FD1A6F9FFA003FF5CF /* Main.storyboard */; };
 		8B03B3011A6F9FFA003FF5CF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3001A6F9FFA003FF5CF /* Images.xcassets */; };
 		8B03B3041A6F9FFA003FF5CF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B03B3021A6F9FFA003FF5CF /* LaunchScreen.xib */; };
-		8BD496311A7B6A930049B38C /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD496301A7B6A930049B38C /* libBeaconKit.a */; };
 		9EC5B1CA1A7798BB001934AD /* PHLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */; };
 		9EC5B1CB1A7798BB001934AD /* PHLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C01A7798BB001934AD /* PHLoadingViewController.xib */; };
 		9EC5B1CC1A7798BB001934AD /* PHBridgePushLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC5B1C21A7798BB001934AD /* PHBridgePushLinkViewController.m */; };
@@ -30,6 +29,7 @@
 		BA027A251A778B7100ED1424 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1B1A778B7100ED1424 /* DDTTYLogger.m */; };
 		BA027A261A778B7100ED1424 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */; };
 		BA027A271A778B7100ED1424 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */; };
+		BAFF243C1A81FF210083F2B6 /* libBeaconKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFF243B1A81FF210083F2B6 /* libBeaconKit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,6 @@
 		8B03B3031A6F9FFA003FF5CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8B03B30E1A6F9FFA003FF5CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B03B30F1A6F9FFA003FF5CF /* CTFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTFTests.m; sourceTree = "<group>"; };
-		8BD496301A7B6A930049B38C /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../../../Library/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 		8BEBAF9D1A7B757E00D39EAB /* CTFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CTFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EC5B1BE1A7798BB001934AD /* PHLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoadingViewController.h; sourceTree = "<group>"; };
 		9EC5B1BF1A7798BB001934AD /* PHLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoadingViewController.m; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		BA027A1E1A778B7100ED1424 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
 		BA027A1F1A778B7100ED1424 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		BA027A201A778B7100ED1424 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		BAFF243B1A81FF210083F2B6 /* libBeaconKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBeaconKit.a; path = "../../../Library/Developer/Xcode/DerivedData/Beacon_Workshop-acrlykmfqoglxpcqfqqxknpkyjes/Build/Products/Debug-iphoneos/libBeaconKit.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BD496311A7B6A930049B38C /* libBeaconKit.a in Frameworks */,
+				BAFF243C1A81FF210083F2B6 /* libBeaconKit.a in Frameworks */,
 				BA027A101A778B3D00ED1424 /* HueSDK_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +182,7 @@
 		8B6A7F091A777BF9001BB995 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8BD496301A7B6A930049B38C /* libBeaconKit.a */,
+				BAFF243B1A81FF210083F2B6 /* libBeaconKit.a */,
 				BA027A111A778B7100ED1424 /* Lumberjack */,
 				BA027A0F1A778B3D00ED1424 /* HueSDK_iOS.framework */,
 			);
@@ -302,6 +302,7 @@
 				TargetAttributes = {
 					8B03B2EF1A6F9FFA003FF5CF = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Q79FTA4VEX;
 					};
 					8BEBAF9C1A7B757E00D39EAB = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -507,6 +508,7 @@
 					"$(inherited)",
 					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Beacon_Workshop-acrlykmfqoglxpcqfqqxknpkyjes/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,6 +534,7 @@
 					"$(inherited)",
 					"/Users/lukasz.kuczborski/Development/HomeKit_Workshop/BeaconKit/build/Debug-iphoneos",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/HomeKit_Workshop-aiurmeqzxztbhoaoktdnarvepwou/Build/Products/Debug-iphoneos",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Beacon_Workshop-acrlykmfqoglxpcqfqqxknpkyjes/Build/Products/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -601,6 +604,7 @@
 				8BEBAFA61A7B757E00D39EAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

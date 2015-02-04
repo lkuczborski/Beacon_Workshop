@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 ACME. All rights reserved.
 //
 
-@import BeaconKit;
+#import <BeaconKit/BeaconKit.h>
 
 #import <UIKit/UIKit.h>
 
