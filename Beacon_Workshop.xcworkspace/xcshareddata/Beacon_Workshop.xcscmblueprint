@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "8B738B49F874EFF0A6758C1C3AF07504BFA5E954",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "8B738B49F874EFF0A6758C1C3AF07504BFA5E954" : 0,
+    "25ADD4A4F32E81572E4B9DAE698B34C45AF10627" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3A5BC8C5-19D9-4D22-B3AD-B5B733521262",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "8B738B49F874EFF0A6758C1C3AF07504BFA5E954" : "Beacon_Workshop\/",
+    "25ADD4A4F32E81572E4B9DAE698B34C45AF10627" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Beacon_Workshop",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Beacon_Workshop.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lkuczborski\/Beacon_Workshop",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "25ADD4A4F32E81572E4B9DAE698B34C45AF10627"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/sloik\/Beacon_Workshop.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8B738B49F874EFF0A6758C1C3AF07504BFA5E954"
+    }
+  ]
+}
