@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA725E071C6BDEF30002DEA6 /* PorkRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA725E061C6BDEF30002DEA6 /* PorkRegion.swift */; };
 		BAECFA3F1C61655700D1227D /* ProkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BAECFA3E1C61655700D1227D /* ProkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAECFA461C61655700D1227D /* ProkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAECFA3B1C61655700D1227D /* ProkKit.framework */; };
 		BAECFA4B1C61655700D1227D /* ProkKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAECFA4A1C61655700D1227D /* ProkKitTests.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA725E061C6BDEF30002DEA6 /* PorkRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PorkRegion.swift; sourceTree = "<group>"; };
 		BAECFA3B1C61655700D1227D /* ProkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAECFA3E1C61655700D1227D /* ProkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProkKit.h; sourceTree = "<group>"; };
 		BAECFA401C61655700D1227D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				BAECFA3E1C61655700D1227D /* ProkKit.h */,
 				BAECFA401C61655700D1227D /* Info.plist */,
+				BA725E061C6BDEF30002DEA6 /* PorkRegion.swift */,
 			);
 			path = ProkKit;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA725E071C6BDEF30002DEA6 /* PorkRegion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		BAECFA501C61655700D1227D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.ProkKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BAECFA511C61655700D1227D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -376,6 +383,7 @@
 				BAECFA511C61655700D1227D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BAECFA521C61655700D1227D /* Build configuration list for PBXNativeTarget "ProkKitTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +392,7 @@
 				BAECFA541C61655700D1227D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
