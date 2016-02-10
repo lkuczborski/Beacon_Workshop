@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA725E071C6BDEF30002DEA6 /* PorkRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA725E061C6BDEF30002DEA6 /* PorkRegion.swift */; };
+		BA725E0B1C6BE7910002DEA6 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA725E0A1C6BE7910002DEA6 /* Beacon.swift */; };
 		BAECFA3F1C61655700D1227D /* ProkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BAECFA3E1C61655700D1227D /* ProkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAECFA461C61655700D1227D /* ProkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAECFA3B1C61655700D1227D /* ProkKit.framework */; };
 		BAECFA4B1C61655700D1227D /* ProkKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAECFA4A1C61655700D1227D /* ProkKitTests.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		BA725E061C6BDEF30002DEA6 /* PorkRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PorkRegion.swift; sourceTree = "<group>"; };
+		BA725E0A1C6BE7910002DEA6 /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		BAECFA3B1C61655700D1227D /* ProkKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProkKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAECFA3E1C61655700D1227D /* ProkKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProkKit.h; sourceTree = "<group>"; };
 		BAECFA401C61655700D1227D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				BAECFA3E1C61655700D1227D /* ProkKit.h */,
 				BAECFA401C61655700D1227D /* Info.plist */,
 				BA725E061C6BDEF30002DEA6 /* PorkRegion.swift */,
+				BA725E0A1C6BE7910002DEA6 /* Beacon.swift */,
 			);
 			path = ProkKit;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA725E071C6BDEF30002DEA6 /* PorkRegion.swift in Sources */,
+				BA725E0B1C6BE7910002DEA6 /* Beacon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

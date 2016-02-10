@@ -9,10 +9,10 @@
 import Foundation
 
 struct PorkRegion {
-    private(set) let name: String
-    private(set) let uuid: String
+    private(set) var name: String
+    private(set) var uuid: String
 
-    init(name name:String, uuid: String) {
+    init(name:String, uuid: String) {
         self.name = name
         self.uuid = uuid
     }
