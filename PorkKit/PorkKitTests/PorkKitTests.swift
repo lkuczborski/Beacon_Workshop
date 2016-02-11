@@ -1,15 +1,15 @@
 //
-//  ProkKitTests.swift
-//  ProkKitTests
+//  PorkKitTests.swift
+//  PorkKitTests
 //
-//  Created by Lukasz Stocki on 02/02/16.
+//  Created by Lukasz Stocki on 11/02/16.
 //  Copyright © 2016 A.C.M.E. All rights reserved.
 //
 
 import XCTest
-@testable import ProkKit
+@testable import PorkKit
 
-class ProkKitTests: XCTestCase {
+class PorkKitTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
