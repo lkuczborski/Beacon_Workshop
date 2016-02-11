@@ -9,7 +9,7 @@
 import Foundation
 import CoreLocation;
 
-struct Pork {
+public struct Pork {
 
     private(set) var major    : CLBeaconMajorValue
     private(set) var minor    : CLBeaconMinorValue
@@ -50,13 +50,13 @@ struct Pork {
 }
 
 extension Pork: CustomStringConvertible {
-    var description: String {
+    public var description: String {
         return "UUID: \(self.uuid) Major: \(self.major) Minor: \(self.minor)"
     }
 }
 
 extension Pork: CustomDebugStringConvertible {
-    var debugDescription: String {
+    public var debugDescription: String {
         return self.description
     }
 }
