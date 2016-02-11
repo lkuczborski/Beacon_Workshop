@@ -49,7 +49,6 @@ class PorkHandler: NSObject, CLLocationManagerDelegate {
             registerRegions()
         }
     }
-
 }
 
 private extension PorkHandler {
