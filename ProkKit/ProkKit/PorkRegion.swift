@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct PorkRegion {
-    private(set) var name: String
-    private(set) var uuid: String
+public struct PorkRegion {
+    let name: String
+    let uuid: String
 
     init(name:String, uuid: String) {
         self.name = name
