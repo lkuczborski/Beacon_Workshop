@@ -8,11 +8,19 @@
 
 import Foundation
 
-struct PorkRegion {
-    private(set) var name: String
-    private(set) var uuid: String
+enum PorkRegionError: ErrorType {
+    case InvalidUUID
+}
 
-    init(name:String, uuid: String) {
+public struct PorkRegion {
+    let name: String
+    let uuid: String
+
+    init(name:String, uuid: String) throws {
+        guard let _ = NSUUID.init(UUIDString: uuid) else {
+            throw PorkRegionError.InvalidUUID
+        }
+
         self.name = name
         self.uuid = uuid
     }
