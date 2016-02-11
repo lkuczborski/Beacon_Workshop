@@ -44,6 +44,10 @@ public struct Pork {
         self.init(uuid: beacon.proximityUUID.UUIDString,
                  major: CLBeaconMajorValue(beacon.major.integerValue),
                  minor: CLBeaconMinorValue(beacon.minor.integerValue))
+
+        proximity = beacon.proximity
+        accuracy  = beacon.accuracy
+        rssi      = beacon.rssi
     }
 
 

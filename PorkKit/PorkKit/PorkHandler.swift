@@ -11,24 +11,28 @@ import CoreLocation
 
 enum PorkHandlerErrors: ErrorType {
     case TooManyRegions(message: String)
+    case MissingKeysInPlisFile(keys:[String])
 }
 
 protocol PorkEventHandler: class { // 💩
-    func porkHandlerDidUpdateBeacons(porkHandler: PorkHandler, beacons: [CLBeacon])
+    func porkHandlerDidUpdateBeacons(porkHandler: PorkHandler, beacons: [Pork])
 }
 
-class PorkHandler: NSObject, CLLocationManagerDelegate {
+class PorkHandler: NSObject {
     private(set) weak var eventHandler: PorkEventHandler?
 
     private let PorkLimit = 20
     private var isRunning = false
 
     private let locationManager: CLLocationManager
-    private var porkRegions: [PorkRegion]
+    private var porkRegions    : [PorkRegion]
+    private var handledBeacons : [String : Pork] = [:]
 
     init(porkRegions: [PorkRegion], porkEventHandler: PorkEventHandler? = nil) throws {
 
         self.porkRegions = porkRegions
+        eventHandler = porkEventHandler
+
         locationManager = CLLocationManager.init()
 
         super.init()
@@ -64,6 +68,43 @@ private extension PorkHandler {
         }
     }
 
+    func validateInfoPlist() throws {
+        // TODO: validate plist keys and throw an error if they are missing in the bundle...
+    }
+
+}
+
+extension PorkHandler: CLLocationManagerDelegate {
+
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+
+        if case CLAuthorizationStatus.AuthorizedAlways = status {
+            start()
+            self.locationManager .startUpdatingLocation()
+        }
+        else if case CLAuthorizationStatus.NotDetermined = status {
+            self.locationManager .requestAlwaysAuthorization()
+        }
+    }
+
+    func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+
+        let processedPork: [Pork] =
+            beacons.map{ (clb: CLBeacon) -> Pork in   // convert beacon to Pork! with all proximity/accuracy/rssi pass along
+                return Pork.init(beacon: clb)
+            }
+
+        // Can't chaing forEach beacouse it returns "()" :(
+        for pork in processedPork {
+                let storedPork = self.handledBeacons[pork.description]
+
+                if storedPork == nil {
+                    self.handledBeacons[pork.description] = pork
+                }
+        }
+
+        eventHandler?.porkHandlerDidUpdateBeacons(self, beacons: processedPork)
+    }
 }
 
 private extension CLBeaconRegion {
