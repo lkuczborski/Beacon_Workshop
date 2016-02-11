@@ -55,6 +55,12 @@ extension Beacon: CustomStringConvertible {
     }
 }
 
+extension Beacon: CustomDebugStringConvertible {
+    var debugDescription: String {
+        return self.description
+    }
+}
+
 extension CLBeacon {
     var baseData: String {
         return "UUID: \(self.proximityUUID.UUIDString) Major: \(self.major) Minor: \(self.minor)"
