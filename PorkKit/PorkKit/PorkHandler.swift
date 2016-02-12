@@ -96,10 +96,10 @@ extension PorkHandler: CLLocationManagerDelegate {
 
         // Can't chaing forEach beacouse it returns "()" :(
         for pork in processedPork {
-                let storedPork = self.handledBeacons[pork.description]
+                let storedPork = self.handledBeacons[pork.commonDescription]
 
                 if storedPork == nil {
-                    self.handledBeacons[pork.description] = pork
+                    self.handledBeacons[pork.commonDescription] = pork
                 }
         }
 
@@ -117,5 +117,13 @@ private extension CLBeaconRegion {
         self.notifyOnEntry = true
         self.notifyOnExit  = true
         self.notifyEntryStateOnDisplay = true
+    }
+}
+
+private extension Pork {
+
+    // Regular description may be changed in Pork and that would brake other functionality.
+    var commonDescription: String {
+        return "UUID: \(self.uuid) Major: \(self.major) Minor: \(self.minor)"
     }
 }
