@@ -16,7 +16,7 @@ public struct PorkRegion {
     let name: String
     let uuid: String
 
-    init(name:String, uuid: String) throws {
+    init(name: String, uuid: String) throws {
         guard let _ = NSUUID.init(UUIDString: uuid) else {
             throw PorkRegionError.InvalidUUID
         }
@@ -24,4 +24,5 @@ public struct PorkRegion {
         self.name = name
         self.uuid = uuid
     }
+
 }

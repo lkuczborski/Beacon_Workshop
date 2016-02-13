@@ -30,7 +30,6 @@ class PorkHandler: NSObject {
 
     init(porkRegions: [PorkRegion], porkEventHandler: PorkEventHandler? = nil) throws {
 
-
         self.porkRegions = porkRegions
         eventHandler = porkEventHandler
 
@@ -56,6 +55,7 @@ class PorkHandler: NSObject {
             registerRegions()
         }
     }
+
 }
 
 private extension PorkHandler {
@@ -75,16 +75,17 @@ private extension PorkHandler {
 
         switch self.plistValidator.validationResult {
 
-            case .AllwaysAndWhenInUse?, .Allways? :
+            case .AllwaysAndWhenInUse?, .Allways?:
                 self.locationManager .requestAlwaysAuthorization()
 
             case .WhenInUse?:
                 self.locationManager.requestWhenInUseAuthorization()
 
             default:
-                break;
+                break
         }
     }
+
 }
 
 extension PorkHandler: CLLocationManagerDelegate {
@@ -93,7 +94,7 @@ extension PorkHandler: CLLocationManagerDelegate {
 
         switch status {
 
-            case .AuthorizedAlways, .AuthorizedWhenInUse :
+            case .AuthorizedAlways, .AuthorizedWhenInUse:
                 try! start()
                 self.locationManager .startUpdatingLocation()
 
@@ -108,7 +109,7 @@ extension PorkHandler: CLLocationManagerDelegate {
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
 
         let processedPork: [Pork] =
-            beacons.map{ (clb: CLBeacon) -> Pork in   // convert beacon to Pork! with all proximity/accuracy/rssi pass along
+            beacons.map { (clb: CLBeacon) -> Pork in   // convert beacon to Pork! with all proximity/accuracy/rssi pass along
                 return Pork.init(beacon: clb)
             }
 
@@ -123,6 +124,7 @@ extension PorkHandler: CLLocationManagerDelegate {
 
         eventHandler?.porkHandlerDidUpdateBeacons(self, beacons: processedPork)
     }
+
 }
 
 private extension CLBeaconRegion {
