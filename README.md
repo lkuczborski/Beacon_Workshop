@@ -1,5 +1,8 @@
 This project came to life as an [MCE](http://mceconf.com "Mobile Central Europe") 2015 Jitter workshop idea. It contains three projects:
 
+# PorkKit
+BeaconKit code base moved to Swift 2.2.
+
 # BeaconKit
 Small static library for registering beacons and getting updates from them. ```BeaconKit``` consists of three classes:
 - ```Beacon``` - representing beacon itself
