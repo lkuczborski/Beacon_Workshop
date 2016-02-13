@@ -11,7 +11,6 @@ import CoreLocation
 
 enum PorkHandlerErrors: ErrorType {
     case TooManyRegions(message: String)
-    case MissingKeysInPlisFile(keys:[String])
 }
 
 protocol PorkEventHandler: class { // 💩
@@ -21,14 +20,16 @@ protocol PorkEventHandler: class { // 💩
 class PorkHandler: NSObject {
     private(set) weak var eventHandler: PorkEventHandler?
 
-    private let PorkLimit = 20
-    private var isRunning = false
+    private let PorkLimit      = 20
+    private var isRunning      = false
+    private var plistValidator = PlistKeysChecker()
 
     private let locationManager: CLLocationManager
     private let porkRegions    : [PorkRegion]
     private var handledBeacons : [String : Pork] = [:]
 
     init(porkRegions: [PorkRegion], porkEventHandler: PorkEventHandler? = nil) throws {
+
 
         self.porkRegions = porkRegions
         eventHandler = porkEventHandler
@@ -46,9 +47,11 @@ class PorkHandler: NSObject {
         }
     }
 
-    func start() {
+    func start() throws {
         if isRunning == false {
             isRunning = true
+
+            try plistValidator.validate()
 
             registerRegions()
         }
@@ -68,22 +71,37 @@ private extension PorkHandler {
         }
     }
 
-    func validateInfoPlist() throws {
-        // TODO: validate plist keys and throw an error if they are missing in the bundle...
-    }
+    func requestForLocationManagerAuthorization() {
 
+        switch self.plistValidator.validationResult {
+
+            case .AllwaysAndWhenInUse?, .Allways? :
+                self.locationManager .requestAlwaysAuthorization()
+
+            case .WhenInUse?:
+                self.locationManager.requestWhenInUseAuthorization()
+
+            default:
+                break;
+        }
+    }
 }
 
 extension PorkHandler: CLLocationManagerDelegate {
 
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
 
-        if case CLAuthorizationStatus.AuthorizedAlways = status {
-            start()
-            self.locationManager .startUpdatingLocation()
-        }
-        else if case CLAuthorizationStatus.NotDetermined = status {
-            self.locationManager .requestAlwaysAuthorization()
+        switch status {
+
+            case .AuthorizedAlways, .AuthorizedWhenInUse :
+                try! start()
+                self.locationManager .startUpdatingLocation()
+
+            case .NotDetermined:
+                requestForLocationManagerAuthorization()
+
+            default:
+                break
         }
     }
 

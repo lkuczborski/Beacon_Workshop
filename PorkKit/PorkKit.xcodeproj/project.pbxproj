@@ -13,6 +13,7 @@
 		BA3C15291C6D17BF00C0B6BB /* Pork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C15281C6D17BF00C0B6BB /* Pork.swift */; };
 		BA3C152B1C6D17C700C0B6BB /* PorkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C152A1C6D17C700C0B6BB /* PorkHandler.swift */; };
 		BA3C152D1C6D17CE00C0B6BB /* PorkRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C152C1C6D17CE00C0B6BB /* PorkRegion.swift */; };
+		BAFDA81A1C6FDB0400CE407D /* PlistKeysChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFDA8191C6FDB0400CE407D /* PlistKeysChecker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		BA3C15281C6D17BF00C0B6BB /* Pork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pork.swift; sourceTree = "<group>"; };
 		BA3C152A1C6D17C700C0B6BB /* PorkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PorkHandler.swift; sourceTree = "<group>"; };
 		BA3C152C1C6D17CE00C0B6BB /* PorkRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PorkRegion.swift; sourceTree = "<group>"; };
+		BAFDA8191C6FDB0400CE407D /* PlistKeysChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlistKeysChecker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				BA3C15281C6D17BF00C0B6BB /* Pork.swift */,
 				BA3C152A1C6D17C700C0B6BB /* PorkHandler.swift */,
 				BA3C152C1C6D17CE00C0B6BB /* PorkRegion.swift */,
+				BAFDA8191C6FDB0400CE407D /* PlistKeysChecker.swift */,
 				BA3C15131C6D17A900C0B6BB /* Info.plist */,
 			);
 			path = PorkKit;
@@ -205,6 +208,7 @@
 			files = (
 				BA3C152B1C6D17C700C0B6BB /* PorkHandler.swift in Sources */,
 				BA3C15291C6D17BF00C0B6BB /* Pork.swift in Sources */,
+				BAFDA81A1C6FDB0400CE407D /* PlistKeysChecker.swift in Sources */,
 				BA3C152D1C6D17CE00C0B6BB /* PorkRegion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,6 +395,7 @@
 				BA3C15241C6D17A900C0B6BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA3C15251C6D17A900C0B6BB /* Build configuration list for PBXNativeTarget "PorkKitTests" */ = {
 			isa = XCConfigurationList;
@@ -399,6 +404,7 @@
 				BA3C15271C6D17A900C0B6BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
