@@ -25,7 +25,7 @@ class PorkHandler: NSObject {
     private var isRunning = false
 
     private let locationManager: CLLocationManager
-    private var porkRegions    : [PorkRegion]
+    private let porkRegions    : [PorkRegion]
     private var handledBeacons : [String : Pork] = [:]
 
     init(porkRegions: [PorkRegion], porkEventHandler: PorkEventHandler? = nil) throws {
