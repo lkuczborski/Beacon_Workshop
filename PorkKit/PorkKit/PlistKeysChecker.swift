@@ -9,7 +9,7 @@
 import Foundation
 
 enum PlistKeysError: ErrorType {
-    case MissingKeysInPlisFile(keys:[String])
+    case MissingKeysInPlisFile(keys: [String])
 }
 
 enum PresentPlistKeyStatus {
@@ -66,4 +66,5 @@ class PlistKeysChecker {
 
         return (allways, whenInUse)
     }
+
 }

@@ -50,19 +50,20 @@ public struct Pork {
         rssi      = beacon.rssi
     }
 
-
 }
 
 extension Pork: CustomStringConvertible {
     public var description: String {
         return "UUID: \(self.uuid) Major: \(self.major) Minor: \(self.minor)"
     }
+
 }
 
 extension Pork: CustomDebugStringConvertible {
     public var debugDescription: String {
         return self.description
     }
+
 }
 
 extension CLBeacon {
