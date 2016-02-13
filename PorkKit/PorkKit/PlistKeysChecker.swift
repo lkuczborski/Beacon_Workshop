@@ -12,8 +12,6 @@ enum PlistKeysError: ErrorType {
     case MissingKeysInPlisFile(keys:[String])
 }
 
-typealias ValidationResult = (Bool, Bool)
-
 enum PresentPlistKeyStatus {
     case AllwaysAndWhenInUse
     case WhenInUse
