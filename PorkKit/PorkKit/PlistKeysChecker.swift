@@ -50,6 +50,8 @@ class PlistKeysChecker {
 
         let result = PresentPlistKeyStatus.init(allwaysKeyIsPresent: keyStatus.allways,
                                               whenInUseKeyIsPresent: keyStatus.whenInUse)
+        self.validationResult = result
+        
 
         if case PresentPlistKeyStatus.MissingRequiredPlistKeys = result {
             throw PlistKeysError.MissingKeysInPlisFile(keys: [whenInUseKey, alwaysKey])
