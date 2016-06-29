@@ -18,14 +18,10 @@ public struct Pork {
     private(set) var uuid     : String
 
     private(set) var accuracy: CLLocationAccuracy {
-        set {
+        willSet {
             if case let newAccuracy = newValue where newAccuracy != self.accuracy && newAccuracy != -1 {
                 self.accuracy = newAccuracy
             }
-        }
-
-        get {
-            return self.accuracy
         }
     }
 
