@@ -48,6 +48,23 @@ public struct Pork {
 
 }
 
+extension Pork : Equatable {
+}
+
+public func ==(lhs: Pork, rhs: Pork) -> Bool {
+    if lhs.uuid != rhs.uuid {
+        return false
+    }
+    if lhs.major != lhs.major {
+        return false
+    }
+    if lhs.minor != rhs.minor {
+        return false
+    }
+    
+    return true
+}
+
 extension Pork: CustomStringConvertible {
     public var description: String {
         return "UUID: \(self.uuid) Major: \(self.major) Minor: \(self.minor)"
