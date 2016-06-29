@@ -18,14 +18,10 @@ public struct Pork {
     private(set) var uuid     : String
 
     private(set) var accuracy: CLLocationAccuracy {
-        set {
+        willSet {
             if case let newAccuracy = newValue where newAccuracy != self.accuracy && newAccuracy != -1 {
                 self.accuracy = newAccuracy
             }
-        }
-
-        get {
-            return self.accuracy
         }
     }
 
@@ -50,6 +46,23 @@ public struct Pork {
         rssi      = beacon.rssi
     }
 
+}
+
+extension Pork : Equatable {
+}
+
+public func ==(lhs: Pork, rhs: Pork) -> Bool {
+    if lhs.uuid != rhs.uuid {
+        return false
+    }
+    if lhs.major != lhs.major {
+        return false
+    }
+    if lhs.minor != rhs.minor {
+        return false
+    }
+    
+    return true
 }
 
 extension Pork: CustomStringConvertible {
