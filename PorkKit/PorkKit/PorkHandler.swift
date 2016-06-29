@@ -40,7 +40,7 @@ class PorkHandler: NSObject {
         locationManager.delegate = self
 
         // Evry thing has to be assig before I can return nil or return in any way...
-        if porkRegions.count <= PorkLimit {
+        if porkRegions.count >= PorkLimit {
             let message = "💥iOS Applications have a limit of \(PorkLimit) regions that can be monitered"
             throw PorkHandlerErrors.TooManyRegions(message: message)
         }
