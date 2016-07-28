@@ -90,7 +90,7 @@ private extension PorkHandler {
 
 extension PorkHandler: CLLocationManagerDelegate {
 
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
 
         switch status {
 
@@ -106,7 +106,7 @@ extension PorkHandler: CLLocationManagerDelegate {
         }
     }
 
-    func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
+    public func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
 
         let processedPork: [Pork] =
             beacons.map { (clb: CLBeacon) -> Pork in   // convert beacon to Pork! with all proximity/accuracy/rssi pass along
