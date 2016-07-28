@@ -16,7 +16,7 @@ public struct PorkRegion {
     let name: String
     let uuid: String
 
-    init(name: String, uuid: String) throws {
+    public init(name: String, uuid: String) throws {
         guard let _ = UUID.init(uuidString: uuid) else {
             throw PorkRegionError.invalidUUID
         }

@@ -13,7 +13,7 @@ enum PorkHandlerErrors: ErrorProtocol {
     case tooManyRegions(message: String)
 }
 
-protocol PorkEventHandler: class { // 💩
+public protocol PorkEventHandler: class { // 💩
     func porkHandlerDidUpdateBeacons(_ porkHandler: PorkHandler, beacons: [Pork])
 }
 
