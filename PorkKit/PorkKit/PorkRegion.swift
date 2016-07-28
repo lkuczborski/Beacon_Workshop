@@ -8,17 +8,17 @@
 
 import Foundation
 
-enum PorkRegionError: ErrorType {
-    case InvalidUUID
+enum PorkRegionError: ErrorProtocol {
+    case invalidUUID
 }
 
 public struct PorkRegion {
     let name: String
     let uuid: String
 
-    init(name: String, uuid: String) throws {
-        guard let _ = NSUUID.init(UUIDString: uuid) else {
-            throw PorkRegionError.InvalidUUID
+    public init(name: String, uuid: String) throws {
+        guard let _ = UUID.init(uuidString: uuid) else {
+            throw PorkRegionError.invalidUUID
         }
 
         self.name = name

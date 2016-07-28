@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Colors_Swift/Colors_Swift.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PorkKit/PorkKit.xcodeproj">
    </FileRef>
    <FileRef

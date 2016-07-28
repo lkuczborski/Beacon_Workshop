@@ -11,13 +11,13 @@ import CoreLocation;
 
 public struct Pork {
 
-    private(set) var major    : CLBeaconMajorValue
-    private(set) var minor    : CLBeaconMinorValue
-    private(set) var proximity: CLProximity
-    private(set) var rssi     : Int
-    private(set) var uuid     : String
+    public private(set) var major    : CLBeaconMajorValue
+    public private(set) var minor    : CLBeaconMinorValue
+    public private(set) var proximity: CLProximity
+    public private(set) var rssi     : Int
+    public private(set) var uuid     : String
 
-    private(set) var accuracy: CLLocationAccuracy {
+    public private(set) var accuracy: CLLocationAccuracy {
         willSet {
             if case let newAccuracy = newValue where newAccuracy != self.accuracy && newAccuracy != -1 {
                 self.accuracy = newAccuracy
@@ -31,15 +31,15 @@ public struct Pork {
         self.major = major
         self.minor = minor
 
-        proximity = .Unknown
+        proximity = .unknown
         rssi      = 0
         accuracy  = -1;
     }
 
     init(beacon: CLBeacon) {
-        self.init(uuid: beacon.proximityUUID.UUIDString,
-                 major: CLBeaconMajorValue(beacon.major.integerValue),
-                 minor: CLBeaconMinorValue(beacon.minor.integerValue))
+        self.init(uuid: beacon.proximityUUID.uuidString,
+                 major: CLBeaconMajorValue(beacon.major.intValue),
+                 minor: CLBeaconMinorValue(beacon.minor.intValue))
 
         proximity = beacon.proximity
         accuracy  = beacon.accuracy
@@ -81,6 +81,6 @@ extension Pork: CustomDebugStringConvertible {
 
 extension CLBeacon {
     var baseData: String {
-        return "UUID: \(self.proximityUUID.UUIDString) Major: \(self.major) Minor: \(self.minor)"
+        return "UUID: \(self.proximityUUID.uuidString) Major: \(self.major) Minor: \(self.minor)"
     }
 }

@@ -1,15 +1,15 @@
 //
-//  PorkKitTests.swift
-//  PorkKitTests
+//  Colors_SwiftTests.swift
+//  Colors_SwiftTests
 //
-//  Created by Lukasz Stocki on 11/02/16.
-//  Copyright © 2016 A.C.M.E. All rights reserved.
+//  Created by Lukasz Kuczborski on 28.07.2016.
+//  Copyright © 2016 Beacon Tech. All rights reserved.
 //
 
 import XCTest
-@testable import PorkKit
+@testable import Colors_Swift
 
-class PorkKitTests: XCTestCase {
+class Colors_SwiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

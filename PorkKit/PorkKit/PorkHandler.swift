@@ -9,15 +9,15 @@
 import Foundation
 import CoreLocation
 
-enum PorkHandlerErrors: ErrorType {
-    case TooManyRegions(message: String)
+enum PorkHandlerErrors: ErrorProtocol {
+    case tooManyRegions(message: String)
 }
 
-protocol PorkEventHandler: class { // 💩
-    func porkHandlerDidUpdateBeacons(porkHandler: PorkHandler, beacons: [Pork])
+public protocol PorkEventHandler: class { // 💩
+    func porkHandlerDidUpdateBeacons(_ porkHandler: PorkHandler, beacons: [Pork])
 }
 
-class PorkHandler: NSObject {
+public class PorkHandler: NSObject {
     private(set) weak var eventHandler: PorkEventHandler?
 
     private let PorkLimit      = 20
@@ -28,7 +28,7 @@ class PorkHandler: NSObject {
     private let porkRegions    : [PorkRegion]
     private var handledBeacons : [String : Pork] = [:]
 
-    init(porkRegions: [PorkRegion], porkEventHandler: PorkEventHandler? = nil) throws {
+    public init(porkRegions: [PorkRegion], porkEventHandler: PorkEventHandler? = nil) throws {
 
         self.porkRegions = porkRegions
         eventHandler = porkEventHandler
@@ -42,15 +42,15 @@ class PorkHandler: NSObject {
         // Evry thing has to be assig before I can return nil or return in any way...
         if porkRegions.count >= PorkLimit {
             let message = "💥iOS Applications have a limit of \(PorkLimit) regions that can be monitered"
-            throw PorkHandlerErrors.TooManyRegions(message: message)
+            throw PorkHandlerErrors.tooManyRegions(message: message)
         }
     }
 
-    func start() throws {
+    public func start() throws {
         if isRunning == false {
             isRunning = true
 
-            try plistValidator.validate()
+            let _ = try plistValidator.validate()
 
             registerRegions()
         }
@@ -66,8 +66,8 @@ private extension PorkHandler {
                 CLBeaconRegion.init(porkRegion: $0)
             }
             .forEach {
-                self.locationManager.startMonitoringForRegion($0)
-                self.locationManager.startRangingBeaconsInRegion($0)
+                self.locationManager.startMonitoring(for: $0)
+                self.locationManager.startRangingBeacons(in: $0)
         }
     }
 
@@ -75,10 +75,10 @@ private extension PorkHandler {
 
         switch self.plistValidator.validationResult {
 
-            case .AllwaysAndWhenInUse?, .Allways?:
+            case .allwaysAndWhenInUse?, .allways?:
                 self.locationManager .requestAlwaysAuthorization()
 
-            case .WhenInUse?:
+            case .whenInUse?:
                 self.locationManager.requestWhenInUseAuthorization()
 
             default:
@@ -90,15 +90,15 @@ private extension PorkHandler {
 
 extension PorkHandler: CLLocationManagerDelegate {
 
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    public func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
 
         switch status {
 
-            case .AuthorizedAlways, .AuthorizedWhenInUse:
+            case .authorizedAlways, .authorizedWhenInUse:
                 try! start()
                 self.locationManager .startUpdatingLocation()
 
-            case .NotDetermined:
+            case .notDetermined:
                 requestForLocationManagerAuthorization()
 
             default:
@@ -106,7 +106,7 @@ extension PorkHandler: CLLocationManagerDelegate {
         }
     }
 
-    func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+    public func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
 
         let processedPork: [Pork] =
             beacons.map { (clb: CLBeacon) -> Pork in   // convert beacon to Pork! with all proximity/accuracy/rssi pass along
@@ -130,7 +130,7 @@ extension PorkHandler: CLLocationManagerDelegate {
 private extension CLBeaconRegion {
      convenience init(porkRegion: PorkRegion) {
         // It's imposible ;) to create a PorkRegion with invalid UUID string!
-        let uuid = NSUUID.init(UUIDString: porkRegion.uuid)!
+        let uuid = UUID.init(uuidString: porkRegion.uuid)!
 
         self.init(proximityUUID: uuid, identifier: porkRegion.name)
 
