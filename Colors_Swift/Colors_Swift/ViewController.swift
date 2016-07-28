@@ -23,7 +23,6 @@ class ViewController: UIViewController {
         self.setupPorkHandler()
     }
 
-
     // MARK: PorkHandler
 
     func setupPorkHandler() {
