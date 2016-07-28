@@ -34,43 +34,42 @@ class ViewController: UIViewController {
         else {
             return
         }
+
         let regions = [redRegion, blueRegion, greenRegion]
+
         do {
             handler = try PorkHandler(porkRegions: regions, porkEventHandler: self)
             try handler?.start()
         } catch {
             print("Error: \(error)")
         }
-
     }
 
     func getComponentValueFromBeacon(_ beacon: Pork) -> CGFloat {
 
-        // http://stn.spotfire.com/spotfire_client_help/norm/norm_scale_between_0_and_1.htm
         var normalized: CGFloat = 0.5
 
         // some more hints using proximity
         if beacon.proximity == .immediate {
-            normalized += 0.5;
+            normalized += 0.5
         }
         else if beacon.proximity == .unknown {
-            normalized -= 0.1;
+            normalized -= 0.1
         }
         else if beacon.proximity == .near {
-            normalized += 0.1;
+            normalized += 0.1
         }
 
         // checking the bounds again...
         if (normalized < 0) {
-            normalized = 0.0001;
+            normalized = 0.0001
         }
         
         if (normalized > 1) {
-            normalized = 1;
+            normalized = 1
         }
         
-        return normalized;
-
+        return normalized
     }
 
     func animateToColor(_ color: UIColor) {
