@@ -28,7 +28,7 @@ public class PorkHandler: NSObject {
     private let porkRegions    : [PorkRegion]
     private var handledBeacons : [String : Pork] = [:]
 
-    init(porkRegions: [PorkRegion], porkEventHandler: PorkEventHandler? = nil) throws {
+    public init(porkRegions: [PorkRegion], porkEventHandler: PorkEventHandler? = nil) throws {
 
         self.porkRegions = porkRegions
         eventHandler = porkEventHandler
@@ -46,7 +46,7 @@ public class PorkHandler: NSObject {
         }
     }
 
-    func start() throws {
+    public func start() throws {
         if isRunning == false {
             isRunning = true
 
