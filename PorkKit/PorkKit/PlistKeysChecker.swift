@@ -8,29 +8,29 @@
 
 import Foundation
 
-enum PlistKeysError: ErrorType {
-    case MissingKeysInPlisFile(keys: [String])
+enum PlistKeysError: ErrorProtocol {
+    case missingKeysInPlisFile(keys: [String])
 }
 
 enum PresentPlistKeyStatus {
-    case AllwaysAndWhenInUse
-    case WhenInUse
-    case Allways
-    case MissingRequiredPlistKeys
+    case allwaysAndWhenInUse
+    case whenInUse
+    case allways
+    case missingRequiredPlistKeys
 
     init(allwaysKeyIsPresent a: Bool, whenInUseKeyIsPresent w: Bool) {
         switch (a, w) {
         case (true, true):
-            self = .AllwaysAndWhenInUse
+            self = .allwaysAndWhenInUse
 
         case (true, false):
-            self = .Allways
+            self = .allways
 
         case (false, true):
-            self = .WhenInUse
+            self = .whenInUse
 
         case (false, false):
-            self = .MissingRequiredPlistKeys
+            self = .missingRequiredPlistKeys
         }
     }
 }
@@ -53,15 +53,15 @@ class PlistKeysChecker {
         self.validationResult = result
         
 
-        if case PresentPlistKeyStatus.MissingRequiredPlistKeys = result {
-            throw PlistKeysError.MissingKeysInPlisFile(keys: [whenInUseKey, alwaysKey])
+        if case PresentPlistKeyStatus.missingRequiredPlistKeys = result {
+            throw PlistKeysError.missingKeysInPlisFile(keys: [whenInUseKey, alwaysKey])
         }
 
         return result
     }
 
     func keysPresent() -> (allways: Bool, whenInUse: Bool) {
-        let infoPlist = NSBundle.mainBundle().infoDictionary
+        let infoPlist = Bundle.main.infoDictionary
 
         let allways   = infoPlist?[alwaysKey]    != nil
         let whenInUse = infoPlist?[whenInUseKey] != nil
