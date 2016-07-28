@@ -14,7 +14,7 @@
 		8BA1A52D1D4A324600820417 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA1A52B1D4A324600820417 /* LaunchScreen.storyboard */; };
 		8BA1A5381D4A324600820417 /* Colors_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1A5371D4A324600820417 /* Colors_SwiftTests.swift */; };
 		8BA1A5431D4A324600820417 /* Colors_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1A5421D4A324600820417 /* Colors_SwiftUITests.swift */; };
-		8BA1A5521D4A32A000820417 /* PorkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA1A5511D4A32A000820417 /* PorkKit.framework */; };
+		8BA1A5541D4A465A00820417 /* PorkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA1A5531D4A465A00820417 /* PorkKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +49,7 @@
 		8BA1A5421D4A324600820417 /* Colors_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors_SwiftUITests.swift; sourceTree = "<group>"; };
 		8BA1A5441D4A324600820417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BA1A5511D4A32A000820417 /* PorkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PorkKit.framework; path = "../PorkKit/build/Debug-iphoneos/PorkKit.framework"; sourceTree = "<group>"; };
+		8BA1A5531D4A465A00820417 /* PorkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PorkKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/Beacon_Workshop-fvtzyaroenteeghaqvuoyjibdheg/Build/Products/Debug-iphonesimulator/PorkKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA1A5521D4A32A000820417 /* PorkKit.framework in Frameworks */,
+				8BA1A5541D4A465A00820417 /* PorkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +133,7 @@
 		8BA1A5501D4A32A000820417 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BA1A5531D4A465A00820417 /* PorkKit.framework */,
 				8BA1A5511D4A32A000820417 /* PorkKit.framework */,
 			);
 			name = Frameworks;
@@ -513,6 +515,7 @@
 				8BA1A5491D4A324600820417 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BA1A54A1D4A324600820417 /* Build configuration list for PBXNativeTarget "Colors_SwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +524,7 @@
 				8BA1A54C1D4A324600820417 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8BA1A54D1D4A324600820417 /* Build configuration list for PBXNativeTarget "Colors_SwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +533,7 @@
 				8BA1A54F1D4A324600820417 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

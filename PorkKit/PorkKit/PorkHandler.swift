@@ -17,7 +17,7 @@ protocol PorkEventHandler: class { // 💩
     func porkHandlerDidUpdateBeacons(_ porkHandler: PorkHandler, beacons: [Pork])
 }
 
-class PorkHandler: NSObject {
+public class PorkHandler: NSObject {
     private(set) weak var eventHandler: PorkEventHandler?
 
     private let PorkLimit      = 20
