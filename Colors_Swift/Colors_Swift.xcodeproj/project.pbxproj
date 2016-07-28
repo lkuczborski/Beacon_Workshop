@@ -14,7 +14,8 @@
 		8BA1A52D1D4A324600820417 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA1A52B1D4A324600820417 /* LaunchScreen.storyboard */; };
 		8BA1A5381D4A324600820417 /* Colors_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1A5371D4A324600820417 /* Colors_SwiftTests.swift */; };
 		8BA1A5431D4A324600820417 /* Colors_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1A5421D4A324600820417 /* Colors_SwiftUITests.swift */; };
-		8BA1A5541D4A465A00820417 /* PorkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA1A5531D4A465A00820417 /* PorkKit.framework */; };
+		8BA1A55D1D4A62A500820417 /* PorkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA1A55C1D4A62A500820417 /* PorkKit.framework */; };
+		8BA1A55E1D4A62AB00820417 /* PorkKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8BA1A55C1D4A62A500820417 /* PorkKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8BA1A5581D4A61A500820417 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8BA1A55E1D4A62AB00820417 /* PorkKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8BA1A51F1D4A324600820417 /* Colors_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colors_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA1A5221D4A324600820417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,8 +62,7 @@
 		8BA1A53E1D4A324600820417 /* Colors_SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Colors_SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA1A5421D4A324600820417 /* Colors_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors_SwiftUITests.swift; sourceTree = "<group>"; };
 		8BA1A5441D4A324600820417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8BA1A5511D4A32A000820417 /* PorkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PorkKit.framework; path = "../PorkKit/build/Debug-iphoneos/PorkKit.framework"; sourceTree = "<group>"; };
-		8BA1A5531D4A465A00820417 /* PorkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PorkKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/Beacon_Workshop-fvtzyaroenteeghaqvuoyjibdheg/Build/Products/Debug-iphonesimulator/PorkKit.framework"; sourceTree = "<group>"; };
+		8BA1A55C1D4A62A500820417 /* PorkKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PorkKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/Beacon_Workshop-fvtzyaroenteeghaqvuoyjibdheg/Build/Products/Debug-iphoneos/PorkKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BA1A5541D4A465A00820417 /* PorkKit.framework in Frameworks */,
+				8BA1A55D1D4A62A500820417 /* PorkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +146,7 @@
 		8BA1A5501D4A32A000820417 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8BA1A5531D4A465A00820417 /* PorkKit.framework */,
-				8BA1A5511D4A32A000820417 /* PorkKit.framework */,
+				8BA1A55C1D4A62A500820417 /* PorkKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,6 +161,7 @@
 				8BA1A51B1D4A324600820417 /* Sources */,
 				8BA1A51C1D4A324600820417 /* Frameworks */,
 				8BA1A51D1D4A324600820417 /* Resources */,
+				8BA1A5581D4A61A500820417 /* CopyFiles */,
 			);
 			buildRules = (
 			);

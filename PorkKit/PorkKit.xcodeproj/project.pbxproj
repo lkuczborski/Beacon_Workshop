@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8BA1A5561D4A600F00820417 /* PorkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3C150E1C6D17A900C0B6BB /* PorkKit.framework */; };
 		BA3C15121C6D17A900C0B6BB /* PorkKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BA3C15111C6D17A900C0B6BB /* PorkKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA3C15191C6D17A900C0B6BB /* PorkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3C150E1C6D17A900C0B6BB /* PorkKit.framework */; };
 		BA3C151E1C6D17A900C0B6BB /* PorkKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C151D1C6D17A900C0B6BB /* PorkKitTests.swift */; };
 		BA3C15291C6D17BF00C0B6BB /* Pork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C15281C6D17BF00C0B6BB /* Pork.swift */; };
 		BA3C152B1C6D17C700C0B6BB /* PorkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3C152A1C6D17C700C0B6BB /* PorkHandler.swift */; };
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA3C15191C6D17A900C0B6BB /* PorkKit.framework in Frameworks */,
+				8BA1A5561D4A600F00820417 /* PorkKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
