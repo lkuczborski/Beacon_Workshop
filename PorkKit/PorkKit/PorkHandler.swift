@@ -50,7 +50,7 @@ public class PorkHandler: NSObject {
         if isRunning == false {
             isRunning = true
 
-            try plistValidator.validate()
+            let _ = try plistValidator.validate()
 
             registerRegions()
         }
