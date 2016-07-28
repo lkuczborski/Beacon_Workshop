@@ -11,13 +11,13 @@ import CoreLocation;
 
 public struct Pork {
 
-    private(set) var major    : CLBeaconMajorValue
-    private(set) var minor    : CLBeaconMinorValue
-    private(set) var proximity: CLProximity
-    private(set) var rssi     : Int
-    private(set) var uuid     : String
+    public private(set) var major    : CLBeaconMajorValue
+    public private(set) var minor    : CLBeaconMinorValue
+    public private(set) var proximity: CLProximity
+    public private(set) var rssi     : Int
+    public private(set) var uuid     : String
 
-    private(set) var accuracy: CLLocationAccuracy {
+    public private(set) var accuracy: CLLocationAccuracy {
         willSet {
             if case let newAccuracy = newValue where newAccuracy != self.accuracy && newAccuracy != -1 {
                 self.accuracy = newAccuracy
