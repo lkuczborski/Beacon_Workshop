@@ -47,16 +47,16 @@ class ViewController: UIViewController {
     func getComponentValueFromBeacon(_ beacon: Pork) -> CGFloat {
 
         // http://stn.spotfire.com/spotfire_client_help/norm/norm_scale_between_0_and_1.htm
-        var normalized: CGFloat = fabs(beacon.accuracy - beacon.accuracyMin) / fabs(beacon.accuracyMax - beacon.accuracyMin);
+        var normalized: CGFloat = 0.5
 
         // some more hints using proximity
-        if beacon.proximity == .CLProximityImmediate {
+        if beacon.proximity == .immediate {
             normalized += 0.5;
         }
-        else if beacon.proximity == .CLProximityUnknown {
+        else if beacon.proximity == .unknown {
             normalized -= 0.1;
         }
-        else if beacon.proximity == .CLProximityNear {
+        else if beacon.proximity == .near {
             normalized += 0.1;
         }
 
